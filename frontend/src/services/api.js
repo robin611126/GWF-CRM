@@ -136,10 +136,35 @@ async function routeRequest(method, url, body) {
         const { data, error } = await insforge.database.from('leads')
             .select('*, assigned_user:user_roles!leads_assigned_user_id_fkey(id, first_name, last_name), attachments:lead_attachments(*)').eq('id', id).single();
         if (error) throw error;
+        // Attach converted client info if exists
+        if (data) {
+            const { data: clientData } = await insforge.database.from('clients')
+                .select('id, name, frozen').eq('lead_id', id).is('deleted_at', null).maybeSingle();
+            if (clientData) data.converted_client = clientData;
+        }
         return data;
     }
     if (path.match(/^\/leads\/[^/]+$/) && method === 'PUT') {
         const id = extractId(url, 'leads');
+        // If stage is being changed, route through edge function for business logic
+        if (body.stage) {
+            const { data: currentLead } = await insforge.database.from('leads').select('stage').eq('id', id).single();
+            if (currentLead && currentLead.stage !== body.stage) {
+                try {
+                    const { data: efData, error: efError } = await insforge.functions.invoke('lead-convert', {
+                        body: { action: 'updateStage', leadId: id, updateData: body }
+                    });
+                    if (efError) throw efError;
+                    // Edge function returns a Response, parse it
+                    const result = typeof efData === 'string' ? JSON.parse(efData) : efData;
+                    if (result?.error) throw new Error(result.error);
+                    return result;
+                } catch (efErr) {
+                    // If edge function fails, fall back to direct update for non-critical stage changes
+                    console.warn('Edge function failed, falling back to direct update:', efErr);
+                }
+            }
+        }
         const { data, error } = await insforge.database.from('leads')
             .update({ ...body, updated_at: new Date().toISOString() }).eq('id', id)
             .select('*, assigned_user:user_roles!leads_assigned_user_id_fkey(id, first_name, last_name)').single();
@@ -148,11 +173,26 @@ async function routeRequest(method, url, body) {
     }
     if (path.match(/^\/leads\/[^/]+\/stage$/) && (method === 'PATCH' || method === 'PUT')) {
         const id = extractId(url, 'leads');
-        const { data, error } = await insforge.functions.invoke('lead-convert', {
-            body: { action: 'updateStage', leadId: id, updateData: body }
-        });
-        if (error) throw error;
-        return data;
+        try {
+            const { data, error } = await insforge.functions.invoke('lead-convert', {
+                body: { action: 'updateStage', leadId: id, updateData: body }
+            });
+            if (error) throw error;
+            // Parse edge function response
+            const result = typeof data === 'string' ? JSON.parse(data) : data;
+            if (result?.error) throw { response: { data: result } };
+            return result;
+        } catch (efErr) {
+            // If edge function is unavailable, do a direct update as fallback
+            if (efErr?.response?.data?.error) throw efErr;
+            console.warn('Edge function unavailable, using direct update:', efErr);
+            const updatePayload = { ...body, updated_at: new Date().toISOString() };
+            const { data: updated, error: dbErr } = await insforge.database.from('leads')
+                .update(updatePayload).eq('id', id)
+                .select('*, assigned_user:user_roles!leads_assigned_user_id_fkey(id, first_name, last_name)').single();
+            if (dbErr) throw dbErr;
+            return updated;
+        }
     }
     if (path.match(/^\/leads\/[^/]+\/convert$/) && method === 'POST') {
         const id = extractId(url, 'leads');
