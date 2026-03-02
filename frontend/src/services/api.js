@@ -291,6 +291,10 @@ async function routeRequest(method, url, body) {
     }
     if (path.match(/^\/leads\/[^/]+$/) && method === 'DELETE') {
         const id = extractId(url, 'leads');
+        // Clean up related records first to avoid FK constraints
+        await insforge.database.from('lead_attachments').delete().eq('lead_id', id);
+        // Unlink any converted client (don't delete the client, just remove lead_id reference)
+        await insforge.database.from('clients').update({ lead_id: null }).eq('lead_id', id);
         const { error } = await insforge.database.from('leads').delete().eq('id', id);
         if (error) throw error;
         return { message: 'Lead deleted' };
