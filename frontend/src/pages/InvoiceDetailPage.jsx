@@ -81,25 +81,139 @@ export default function InvoiceDetailPage() {
         }
     };
 
-    const handleDownloadPDF = async () => {
-        try {
-            const response = await api.get(`/invoices/${id}/pdf`, { responseType: 'blob' });
-            const url = window.URL.createObjectURL(new Blob([response.data]));
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', `${invoice.invoice_number}.pdf`);
-            document.body.appendChild(link);
-            link.click();
-            link.parentNode.removeChild(link);
-        } catch { showToast('Failed to download', 'error'); }
+    const generatePDF = () => {
+        const { jsPDF } = require('jspdf');
+        const doc = new jsPDF();
+        const inv = invoice;
+        const pageW = doc.internal.pageSize.getWidth();
+        let y = 20;
+
+        // Header
+        doc.setFontSize(22);
+        doc.setFont('helvetica', 'bold');
+        doc.text('INVOICE', 14, y);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(100);
+        doc.text(inv.invoice_number, 14, y + 8);
+        doc.setTextColor(0);
+
+        // Status badge
+        const statusLabel = STATUS_LABELS[inv.status] || inv.status;
+        doc.setFontSize(12);
+        doc.setFont('helvetica', 'bold');
+        doc.text(statusLabel, pageW - 14, y, { align: 'right' });
+
+        y += 20;
+
+        // Client & dates
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.text('Bill To:', 14, y);
+        doc.setFont('helvetica', 'bold');
+        doc.text(inv.client?.name || '—', 14, y + 6);
+        doc.setFont('helvetica', 'normal');
+        if (inv.client?.company) doc.text(inv.client.company, 14, y + 12);
+        if (inv.client?.email) doc.text(inv.client.email, 14, y + 18);
+
+        doc.text('Issued:', pageW - 70, y);
+        doc.text(new Date(inv.issued_date || inv.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }), pageW - 14, y, { align: 'right' });
+        doc.text('Due:', pageW - 70, y + 6);
+        doc.text(new Date(inv.due_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }), pageW - 14, y + 6, { align: 'right' });
+
+        y += 30;
+
+        // Line items table header
+        doc.setFillColor(240, 240, 240);
+        doc.rect(14, y, pageW - 28, 8, 'F');
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'bold');
+        doc.text('Description', 16, y + 6);
+        doc.text('Qty', 120, y + 6, { align: 'right' });
+        doc.text('Price', 150, y + 6, { align: 'right' });
+        doc.text('Total', pageW - 16, y + 6, { align: 'right' });
+        y += 12;
+
+        // Line items
+        doc.setFont('helvetica', 'normal');
+        (inv.items || []).forEach(item => {
+            doc.text(String(item.description || ''), 16, y);
+            doc.text(String(item.quantity), 120, y, { align: 'right' });
+            doc.text(`₹${Number(item.unit_price).toLocaleString('en-IN')}`, 150, y, { align: 'right' });
+            doc.text(`₹${(Number(item.quantity) * Number(item.unit_price)).toLocaleString('en-IN')}`, pageW - 16, y, { align: 'right' });
+            y += 7;
+        });
+
+        y += 5;
+        doc.setDrawColor(200);
+        doc.line(14, y, pageW - 14, y);
+        y += 8;
+
+        // Totals
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(10);
+        if (Number(inv.tax_rate) > 0) {
+            const subtotal = Number(inv.total_amount) - Number(inv.tax_amount || 0);
+            doc.text('Subtotal:', 130, y);
+            doc.text(`₹${subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, pageW - 16, y, { align: 'right' });
+            y += 7;
+            doc.setFont('helvetica', 'normal');
+            doc.text(`Tax (${inv.tax_rate}%):`, 130, y);
+            doc.text(`₹${Number(inv.tax_amount).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, pageW - 16, y, { align: 'right' });
+            y += 7;
+            doc.setFont('helvetica', 'bold');
+        }
+        doc.setFontSize(12);
+        doc.text('Total:', 130, y);
+        doc.text(`₹${Number(inv.total_amount).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, pageW - 16, y, { align: 'right' });
+        y += 8;
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.text('Paid:', 130, y);
+        doc.text(`₹${Number(inv.amount_paid).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, pageW - 16, y, { align: 'right' });
+        y += 7;
+        const bal = Number(inv.total_amount) - Number(inv.amount_paid);
+        if (bal > 0) {
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(239, 68, 68);
+            doc.text('Balance Due:', 130, y);
+            doc.text(`₹${bal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`, pageW - 16, y, { align: 'right' });
+            doc.setTextColor(0);
+        }
+
+        // Notes
+        if (inv.notes) {
+            y += 15;
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(10);
+            doc.text('Notes:', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(9);
+            doc.text(inv.notes, 14, y + 6);
+        }
+
+        // Footer
+        doc.setFontSize(8);
+        doc.setTextColor(150);
+        doc.text('Generated by GWF CRM', pageW / 2, 285, { align: 'center' });
+
+        return doc;
     };
 
-    const handlePreviewPDF = async () => {
+    const handleDownloadPDF = () => {
         try {
-            const response = await api.get(`/invoices/${id}/pdf`, { responseType: 'blob' });
-            const url = window.URL.createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
+            const doc = generatePDF();
+            doc.save(`${invoice.invoice_number}.pdf`);
+        } catch (err) { console.error(err); showToast('Failed to download', 'error'); }
+    };
+
+    const handlePreviewPDF = () => {
+        try {
+            const doc = generatePDF();
+            const blob = doc.output('blob');
+            const url = window.URL.createObjectURL(blob);
             window.open(url, '_blank');
-        } catch { showToast('Failed to preview', 'error'); }
+        } catch (err) { console.error(err); showToast('Failed to preview', 'error'); }
     };
 
     const addEditItem = () => setEditForm({ ...editForm, items: [...editForm.items, { description: '', quantity: 1, unit_price: 0 }] });
