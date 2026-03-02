@@ -133,17 +133,37 @@ export default function LeadsPage() {
 
     const onDragEnd = async (result) => {
         if (!result.destination) return;
-        const { draggableId, destination } = result;
+        const { draggableId, source, destination } = result;
         const newStage = destination.droppableId;
+        const oldStage = source.droppableId;
+        if (newStage === oldStage) return;
+
         if (newStage === 'LOST') {
             setShowLostModal(draggableId);
             return;
         }
+
+        // Optimistic update: move card immediately in UI
+        setPipeline(prev => {
+            const updated = { ...prev };
+            const sourceList = [...(updated[oldStage] || [])];
+            const destList = [...(updated[newStage] || [])];
+            const cardIndex = sourceList.findIndex(l => l.id === draggableId);
+            if (cardIndex > -1) {
+                const [card] = sourceList.splice(cardIndex, 1);
+                card.stage = newStage;
+                destList.splice(destination.index, 0, card);
+                updated[oldStage] = sourceList;
+                updated[newStage] = destList;
+            }
+            return updated;
+        });
+
         try {
             await api.patch(`/leads/${draggableId}/stage`, { stage: newStage });
-            fetchData();
         } catch (err) {
             showToast(err.response?.data?.error || 'Error updating stage', 'error');
+            fetchData(); // Revert on failure
         }
     };
 
