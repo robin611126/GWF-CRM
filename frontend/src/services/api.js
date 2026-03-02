@@ -236,11 +236,18 @@ async function routeRequest(method, url, body) {
                     }
                 }
                 if (!clientRecord) {
-                    const { data: newClient } = await insforge.database.from('clients')
-                        .insert({
-                            name: currentLead.name, email: currentLead.email,
-                            company: currentLead.company, phone: currentLead.phone, lead_id: id
-                        }).select().single();
+                    const insertPayload = {
+                        name: currentLead.name,
+                        company: currentLead.company || null,
+                        phone: currentLead.phone || null,
+                        lead_id: id
+                    };
+                    if (currentLead.email) insertPayload.email = currentLead.email;
+                    console.log('[Lead-WON] Creating client:', JSON.stringify(insertPayload));
+                    const { data: newClient, error: insertErr } = await insforge.database.from('clients')
+                        .insert(insertPayload).select().single();
+                    if (insertErr) console.error('[Lead-WON] Client insert error:', insertErr);
+                    else console.log('[Lead-WON] Client created:', newClient?.id);
                     clientRecord = newClient;
                 }
                 // Create initial project + milestones
