@@ -160,7 +160,7 @@ export default function ProjectDetailPage() {
     const totalTasks = project.tasks?.length || 0;
     const taskProgress = totalTasks ? Math.round((completedTasks / totalTasks) * 100) : 0;
     const timeSpentDays = project.created_at ? Math.max(0, Math.floor((new Date() - new Date(project.created_at)) / (1000 * 60 * 60 * 24))) : 0;
-    const daysRemaining = project.end_date ? Math.max(0, Math.ceil((new Date(project.end_date) - new Date()) / (1000 * 60 * 60 * 24))) : 0;
+    const daysRemaining = project.end_date ? Math.ceil((new Date(project.end_date) - new Date()) / (1000 * 60 * 60 * 24)) : null;
 
     return (
         <div className="page-enter">
@@ -174,8 +174,8 @@ export default function ProjectDetailPage() {
                             client_id: project.client_id,
                             description: project.description || '',
                             budget: project.budget || '',
-                            start_date: project.start_date ? project.start_date.split('T')[0] : '',
-                            end_date: project.end_date ? project.end_date.split('T')[0] : '',
+                            start_date: project.start_date ? new Date(project.start_date).toISOString().substring(0, 10) : '',
+                            end_date: project.end_date ? new Date(project.end_date).toISOString().substring(0, 10) : '',
                         });
                         setShowEditProject(true);
                     }}><Edit size={18} /></button>
@@ -193,7 +193,10 @@ export default function ProjectDetailPage() {
                     </div>
                     <h2 style={{ fontSize: 24, fontWeight: 800, marginBottom: 4 }}>{project.title}</h2>
                     <div style={{ fontSize: 14, color: 'var(--text-muted)' }}>
-                        {project.client?.name || '—'} • Due {project.end_date ? new Date(project.end_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'No deadline'}
+                        {project.client?.name || '—'}
+                        {project.start_date && ` • Started ${new Date(project.start_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}`}
+                        {project.end_date && ` • Due ${new Date(project.end_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}`}
+                        {!project.end_date && ' • No deadline'}
                     </div>
                 </div>
 
@@ -366,12 +369,25 @@ export default function ProjectDetailPage() {
                                 })()}
                             </div>
 
-                            <div className="glass-card" style={{ padding: 16, borderLeft: `3px solid ${daysRemaining > 0 ? 'var(--color-info)' : 'var(--color-danger)'}` }}>
+                            <div className="glass-card" style={{ padding: 16, borderLeft: `3px solid ${daysRemaining === null ? 'var(--color-info)' : daysRemaining > 0 ? 'var(--color-info)' : 'var(--color-danger)'}` }}>
                                 <div style={{ fontSize: 13, color: 'var(--text-muted)', fontWeight: 600, marginBottom: 8 }}>Timeline</div>
                                 {project.end_date ? (
                                     <>
-                                        <div style={{ fontSize: 20, fontWeight: 800 }}>{daysRemaining} Days</div>
-                                        <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Remaining until deadline</div>
+                                        <div style={{ fontSize: 20, fontWeight: 800, color: daysRemaining < 0 ? 'var(--color-danger)' : daysRemaining <= 7 ? 'var(--color-warning)' : 'var(--text-primary)' }}>
+                                            {daysRemaining < 0 ? `${Math.abs(daysRemaining)} Days Overdue` : `${daysRemaining} Days Left`}
+                                        </div>
+                                        <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 8 }}>
+                                            {project.start_date && (
+                                                <div style={{ fontSize: 12, color: 'var(--text-muted)', display: 'flex', justifyContent: 'space-between' }}>
+                                                    <span>Start Date</span>
+                                                    <span style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>{new Date(project.start_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                                </div>
+                                            )}
+                                            <div style={{ fontSize: 12, color: 'var(--text-muted)', display: 'flex', justifyContent: 'space-between' }}>
+                                                <span>Deadline</span>
+                                                <span style={{ fontWeight: 600, color: daysRemaining < 0 ? 'var(--color-danger)' : 'var(--text-secondary)' }}>{new Date(project.end_date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                                            </div>
+                                        </div>
                                     </>
                                 ) : (
                                     <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-muted)' }}>No deadline set</div>
