@@ -196,14 +196,73 @@ async function routeRequest(method, url, body) {
             }
         }
 
-        // If moving to WON, unfreeze linked client or start conversion
+        // If moving to WON, unfreeze existing client OR auto-convert lead to client
         if (stage === 'WON' && currentLead.stage !== 'WON') {
             const { data: existingClient } = await insforge.database.from('clients')
-                .select('id').eq('lead_id', id).is('deleted_at', null).maybeSingle();
+                .select('id').eq('lead_id', id).maybeSingle();
+
             if (existingClient) {
+                // Client exists — unfreeze and restore
                 await insforge.database.from('clients')
-                    .update({ frozen: false, updated_at: new Date().toISOString() })
+                    .update({ frozen: false, deleted_at: null, updated_at: new Date().toISOString() })
                     .eq('id', existingClient.id);
+            } else {
+                // Auto-convert: check for email duplicate first
+                let clientRecord = null;
+                if (currentLead.email) {
+                    const { data: softDeleted } = await insforge.database.from('clients')
+                        .select('*').eq('email', currentLead.email).not('deleted_at', 'is', null).maybeSingle();
+                    if (softDeleted) {
+                        const { data: restored } = await insforge.database.from('clients')
+                            .update({
+                                deleted_at: null, lead_id: id, name: currentLead.name,
+                                company: currentLead.company, phone: currentLead.phone, frozen: false,
+                                updated_at: new Date().toISOString()
+                            }).eq('id', softDeleted.id).select().single();
+                        clientRecord = restored;
+                    }
+                }
+                if (!clientRecord) {
+                    // Check if active client with same email exists
+                    if (currentLead.email) {
+                        const { data: emailClient } = await insforge.database.from('clients')
+                            .select('id').eq('email', currentLead.email).is('deleted_at', null).maybeSingle();
+                        if (emailClient) {
+                            // Link existing client instead of creating duplicate
+                            await insforge.database.from('leads')
+                                .update({ updated_at: new Date().toISOString() }).eq('id', id);
+                            clientRecord = emailClient;
+                        }
+                    }
+                }
+                if (!clientRecord) {
+                    const { data: newClient } = await insforge.database.from('clients')
+                        .insert({
+                            name: currentLead.name, email: currentLead.email,
+                            company: currentLead.company, phone: currentLead.phone, lead_id: id
+                        }).select().single();
+                    clientRecord = newClient;
+                }
+                // Create initial project + milestones
+                if (clientRecord) {
+                    const { data: project } = await insforge.database.from('projects')
+                        .insert({
+                            client_id: clientRecord.id,
+                            title: `${currentLead.company || currentLead.name} - Initial Project`,
+                            description: 'Auto-created project from lead conversion',
+                            status: 'PLANNING'
+                        }).select().single();
+                    if (project) {
+                        const milestones = [
+                            { label: 'Requirements Gathering', sort_order: 1 },
+                            { label: 'Design Phase', sort_order: 2 },
+                            { label: 'Development', sort_order: 3 },
+                            { label: 'Testing & QA', sort_order: 4 },
+                            { label: 'Deployment & Handover', sort_order: 5 }
+                        ].map(m => ({ ...m, project_id: project.id, is_completed: false }));
+                        await insforge.database.from('project_checklists').insert(milestones);
+                    }
+                }
             }
         }
 
