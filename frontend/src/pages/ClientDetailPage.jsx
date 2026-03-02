@@ -223,7 +223,7 @@ export default function ClientDetailPage() {
                                 const paid = Number(inv.amount_paid || 0);
                                 const due = total - paid;
                                 const paidPct = total > 0 ? (paid / total) * 100 : 0;
-                                const isOverdue = new Date(inv.due_date) < new Date() && inv.status !== 'PAID';
+                                const isOverdue = new Date(inv.due_date) < new Date() && inv.status === 'UNPAID';
                                 const status = isOverdue ? 'OVERDUE' : inv.status;
                                 return (
                                     <div key={inv.id} className="card-item" onClick={() => navigate(`/invoices/${inv.id}`)} style={{ cursor: 'pointer' }}>

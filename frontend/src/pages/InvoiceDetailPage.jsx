@@ -125,7 +125,7 @@ export default function InvoiceDetailPage() {
 
     const balance = Number(invoice.total_amount) - Number(invoice.amount_paid);
     const paidPercent = Number(invoice.total_amount) > 0 ? (Number(invoice.amount_paid) / Number(invoice.total_amount)) * 100 : 0;
-    const isOverdue = new Date(invoice.due_date) < new Date() && invoice.status !== 'PAID';
+    const isOverdue = new Date(invoice.due_date) < new Date() && invoice.status === 'UNPAID';
     const displayStatus = isOverdue ? 'OVERDUE' : invoice.status;
 
     return (
