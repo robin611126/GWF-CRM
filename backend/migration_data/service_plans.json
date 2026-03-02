@@ -1,0 +1,42 @@
+[
+  {
+    "id": "be26cd12-f7b2-45e0-af56-0f6e9e4764cb",
+    "name": "Landing Page",
+    "description": "Single-page responsive website",
+    "price": 9999,
+    "features": "1 page, Mobile responsive, Contact form",
+    "is_active": 1,
+    "created_at": 1772268754993,
+    "updated_at": 1772268754993
+  },
+  {
+    "id": "e9482ce2-dcbb-4968-9420-00c4bc2ab86b",
+    "name": "Business Website",
+    "description": "Multi-page professional website",
+    "price": 24999,
+    "features": "5-10 pages, SEO optimization",
+    "is_active": 1,
+    "created_at": 1772268755002,
+    "updated_at": 1772268755002
+  },
+  {
+    "id": "a28245e9-8d83-4a53-891a-b9abeee33432",
+    "name": "E-Commerce Store",
+    "description": "Online store with payment gateway",
+    "price": 49999,
+    "features": "Product catalog, Payment gateway",
+    "is_active": 1,
+    "created_at": 1772268755007,
+    "updated_at": 1772268755007
+  },
+  {
+    "id": "07d91f9b-2c93-4b92-95fb-6a509f37847e",
+    "name": "Custom Web App",
+    "description": "Tailored web application",
+    "price": 99999,
+    "features": "Custom UI/UX, REST API",
+    "is_active": 1,
+    "created_at": 1772268755013,
+    "updated_at": 1772268755013
+  }
+]

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM Tasks List Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c1ff9",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#0a0a1a",
+                        "accent-purple": "#1e1b4b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-active {
+            background: rgba(140, 31, 249, 0.2);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(140, 31, 249, 0.4);
+        }
+        .bg-gradient-main {
+            background: radial-gradient(circle at top right, #1e1b4b, #0a0a1a 70%);
+        }
+        .glow-red { box-shadow: 0 0 15px rgba(239, 68, 68, 0.3); }
+        .glow-primary { box-shadow: 0 0 20px rgba(140, 31, 249, 0.5); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-slate-100 antialiased">
+<!-- Main Container -->
+<div class="relative mx-auto min-h-screen max-w-md bg-gradient-main overflow-x-hidden pb-32">
+<!-- Header -->
+<header class="sticky top-0 z-20 px-6 pt-8 pb-4 bg-background-dark/40 backdrop-blur-md">
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-3xl font-800 tracking-tight text-slate-100">Tasks</h1>
+<button class="glass p-2.5 rounded-full flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-2xl">tune</span>
+</button>
+</div>
+<!-- Date Selector Pill & Tabs -->
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<button class="glass flex h-10 shrink-0 items-center justify-center gap-2 rounded-full px-5">
+<span class="text-sm font-semibold">Today, Oct 24</span>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="glass flex h-10 shrink-0 items-center justify-center rounded-full px-5 text-slate-400">
+<span class="text-sm font-semibold">Calendar</span>
+</button>
+<button class="glass flex h-10 shrink-0 items-center justify-center rounded-full px-5 text-slate-400">
+<span class="text-sm font-semibold">Completed</span>
+</button>
+</div>
+</header>
+<!-- Task List Content -->
+<main class="px-6 space-y-8 mt-4">
+<!-- Section: Overdue -->
+<section>
+<div class="flex items-center gap-2 mb-4">
+<h2 class="text-lg font-bold text-red-400">Overdue</h2>
+<div class="h-1 w-1 rounded-full bg-red-500 glow-red"></div>
+</div>
+<div class="space-y-3">
+<!-- Overdue Task Card -->
+<div class="glass p-4 rounded-xl flex items-center justify-between group shadow-lg">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="h-6 w-6 rounded-full border-2 border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+</div>
+<div>
+<h3 class="text-base font-semibold text-slate-100">Review GWF Q4 Strategy</h3>
+<p class="text-xs text-slate-400">CRM Overhaul</p>
+</div>
+</div>
+<div class="h-2 w-2 rounded-full bg-red-500 glow-red" title="High Priority"></div>
+</div>
+<!-- Overdue Task Card 2 -->
+<div class="glass p-4 rounded-xl flex items-center justify-between group shadow-lg">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center justify-center">
+<input class="h-6 w-6 rounded-full border-2 border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary transition-all cursor-pointer" type="checkbox"/>
+</div>
+<div>
+<h3 class="text-base font-semibold text-slate-100">Client Onboarding - Zenith</h3>
+<p class="text-xs text-slate-400">Internal Operations</p>
+</div>
+</div>
+<div class="h-2 w-2 rounded-full bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.3)]" title="Medium Priority"></div>
+</div>
+</div>
+</section>
+<!-- Section: Today -->
+<section>
+<h2 class="text-lg font-bold text-slate-100 mb-4">Today</h2>
+<div class="space-y-3">
+<div class="glass p-4 rounded-xl flex items-center justify-between group shadow-lg">
+<div class="flex items-center gap-4">
+<input class="h-6 w-6 rounded-full border-2 border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary cursor-pointer" type="checkbox"/>
+<div>
+<h3 class="text-base font-semibold text-slate-100">Team Sync: UI/UX Updates</h3>
+<p class="text-xs text-slate-400">Design System</p>
+</div>
+</div>
+<div class="h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.3)]" title="Low Priority"></div>
+</div>
+<div class="glass p-4 rounded-xl flex items-center justify-between group shadow-lg">
+<div class="flex items-center gap-4">
+<input class="h-6 w-6 rounded-full border-2 border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary cursor-pointer" type="checkbox"/>
+<div>
+<h3 class="text-base font-semibold text-slate-100">Submit Monthly Expense Report</h3>
+<p class="text-xs text-slate-400">Finance</p>
+</div>
+</div>
+<div class="h-2 w-2 rounded-full bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.3)]"></div>
+</div>
+</div>
+</section>
+<!-- Section: Upcoming -->
+<section>
+<h2 class="text-lg font-bold text-slate-400 mb-4">Upcoming</h2>
+<div class="space-y-3 opacity-70">
+<div class="glass p-4 rounded-xl flex items-center justify-between group shadow-lg">
+<div class="flex items-center gap-4">
+<input class="h-6 w-6 rounded-full border-2 border-slate-600 bg-transparent text-primary focus:ring-primary focus:ring-offset-0 checked:bg-primary cursor-pointer" type="checkbox"/>
+<div>
+<h3 class="text-base font-semibold text-slate-100">API Documentation Review</h3>
+<p class="text-xs text-slate-400">Engineering</p>
+</div>
+</div>
+<div class="h-2 w-2 rounded-full bg-blue-500"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-28 right-6 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-xl glow-primary transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-6 right-6 z-40">
+<div class="glass-active rounded-full px-4 py-3 flex items-center justify-around shadow-2xl backdrop-blur-2xl">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">work</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Clients</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary relative" href="#">
+<span class="material-symbols-outlined text-2xl">check_box</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Tasks</span>
+<!-- Active Indicator -->
+<div class="absolute -bottom-1 h-1 w-4 rounded-full bg-primary shadow-[0_0_8px_#8c1ff9]"></div>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">More</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

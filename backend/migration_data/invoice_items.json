@@ -1,0 +1,23 @@
+[
+  {
+    "id": "5c0d6977-aaa8-4bb0-a014-17c9a97c6ccc",
+    "invoice_id": "60895c1a-5345-4f61-8729-1ef60ecb9d83",
+    "description": "landing page",
+    "quantity": 500,
+    "unit_price": 10
+  },
+  {
+    "id": "6359cca2-fca6-49ab-9e6a-e38820d8602e",
+    "invoice_id": "b1330e8e-e794-4f00-9baa-24becbd9fedb",
+    "description": "landing page website",
+    "quantity": 1,
+    "unit_price": 3000
+  },
+  {
+    "id": "49a811e2-7207-4a69-a782-9f3511408c55",
+    "invoice_id": "7a9848ee-ba5a-4743-8221-3e3a00a006b5",
+    "description": "CRM SOFTWARE",
+    "quantity": 1,
+    "unit_price": 5000
+  }
+]

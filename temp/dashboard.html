@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM Dashboard Screen Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#0a0a1a",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bg-gradient-main {
+            background: radial-gradient(circle at top left, #1e1b4b 0%, #0a0a1a 100%);
+        }
+        .glow-primary {
+            box-shadow: 0 0 15px rgba(13, 89, 242, 0.3);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<div class="relative w-full max-w-[430px] h-screen bg-gradient-main overflow-hidden flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 pt-12 pb-6">
+<div class="flex items-center gap-3">
+<div class="relative">
+<div class="size-12 rounded-full border-2 border-primary/40 p-0.5 overflow-hidden">
+<img alt="Profile Avatar" class="w-full h-full object-cover rounded-full" data-alt="Close up portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG9oFQK0ZtHrTcUBIR-46uU4TXy0DOgUDX3bOtt7ei_j2coalXFkWsTU9wEjTG3WKir69WOUhiOpcbbpszUK5LqdCyldehiR9Uwo-DVyqlMtqyb3b7xWm0hSkSDJY6xAqyd1xiNfAw8M7ejc1pERQP3vrjSDC9JbWByvscHNMY1JkTCW_8lErBpPSnvTQGlNi1TacomK1Pgysum84kvQhFrC08K3YVdv9OIuDzsevIb7oO0dO2Pbiu3jPt93duUZbQh-w2ihA_18o"/>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-background-dark"></div>
+</div>
+<div>
+<p class="text-slate-400 text-xs font-medium uppercase tracking-wider">Welcome back</p>
+<h1 class="text-xl font-bold tracking-tight">Good morning, Alex</h1>
+</div>
+</div>
+<button class="glass p-2.5 rounded-full flex items-center justify-center relative">
+<span class="material-symbols-outlined text-slate-100">notifications</span>
+<span class="absolute top-2.5 right-2.5 size-2 bg-primary rounded-full"></span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto hide-scrollbar px-6 pb-24">
+<!-- Metrics Section - Horizontal Scroll -->
+<section class="mt-4">
+<div class="flex gap-4 overflow-x-auto hide-scrollbar -mx-6 px-6 py-2">
+<!-- Revenue Card -->
+<div class="glass min-w-[200px] p-5 rounded-xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="size-10 rounded-lg bg-green-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-400">payments</span>
+</div>
+<span class="text-green-400 text-xs font-bold bg-green-400/10 px-2 py-1 rounded-full">+15%</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Total Revenue</p>
+<p class="text-2xl font-bold mt-1 tracking-tight">$42,500</p>
+</div>
+</div>
+<!-- Projects Card -->
+<div class="glass min-w-[160px] p-5 rounded-xl flex flex-col gap-4">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Active Projects</p>
+<p class="text-2xl font-bold mt-1 tracking-tight">12</p>
+</div>
+</div>
+<!-- Tasks Card -->
+<div class="glass min-w-[160px] p-5 rounded-xl flex flex-col gap-4">
+<div class="size-10 rounded-lg bg-orange-500/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-400">checklist</span>
+</div>
+<div>
+<p class="text-slate-400 text-sm font-medium">Pending Tasks</p>
+<p class="text-2xl font-bold mt-1 tracking-tight">08</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Tasks Section -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Upcoming Tasks</h3>
+<button class="text-primary text-sm font-semibold">View all</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Task Item 1 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-bold truncate pr-2">Q3 Financial Report</h4>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-red-500/20 text-red-400 px-2 py-0.5 rounded-full shrink-0">High</span>
+</div>
+<div class="flex items-center text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm mr-1">calendar_today</span>
+<span>Due: Oct 20, 2023</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-slate-500">chevron_right</span>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-bold truncate pr-2">Client Discovery Call</h4>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-primary/20 text-primary px-2 py-0.5 rounded-full shrink-0">Medium</span>
+</div>
+<div class="flex items-center text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm mr-1">schedule</span>
+<span>Today at 2:00 PM</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-slate-500">chevron_right</span>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">draw</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h4 class="font-bold truncate pr-2">Brand Assets Review</h4>
+<span class="text-[10px] font-bold uppercase tracking-widest bg-slate-500/20 text-slate-400 px-2 py-0.5 rounded-full shrink-0">Low</span>
+</div>
+<div class="flex items-center text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm mr-1">calendar_today</span>
+<span>Due: Oct 22, 2023</span>
+</div>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-slate-500">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Preview -->
+<section class="mt-8 mb-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Active Project</h3>
+</div>
+<div class="relative rounded-xl overflow-hidden h-48 group">
+<img alt="Project Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Abstract colorful data visualization graphs on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr8wXTjs9TSlZ3fQef4eH_ZvJMtXR4MWjXYuaBrjlzXIDgMjQ_OyGUZ8d2F6kqdzc_vgppn8TldsIC7OJonOo4YJstw5AZjZcaWA7A1ITw0M_A540vXEy75-S0kTIRGpSQFah5CWgj31-zz9pUC2OImi36HDWzku4B1xHxujp79t_qv7Ywr7BoBXrIFNf9IMvvbx6WKHJ3yxLjh5IXW071Plw5X0QEJAzuTbQyNW5G9TXN_vRZDsky-j72lzGM8WKSqxnqYXmKEvc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-4 w-full">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="text-white font-bold text-lg">GWF Redesign</h4>
+<p class="text-slate-300 text-sm">Design &amp; Strategy</p>
+</div>
+<div class="flex -space-x-2">
+<img class="size-8 rounded-full border-2 border-background-dark" data-alt="Woman headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjeUmmkekge09eUP02giQcD4IWjsQqIY8AgWBFXtWCtzqP1_2GkYOAFS25jhgrD2LfUMMiYIRx4j4s0VCr7iF3CpMutl5rpvvI0hkGEEBzAuzhT95udnfNoDEIYfsWz4KeDgNEmewPlMcQI-I-BWgHhaoxjECz46FfLvoNj9ilovN85D7NevfbgLaAGgf0prdEwD_kZB8Vv4uWm6tIsQsIiUwy3OIgoOmaaX5UJkVlBgVLRadmV28G9570IiFtQbQy54yFMGDwYZc"/>
+<img class="size-8 rounded-full border-2 border-background-dark" data-alt="Man headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHpufph-B8FKvXsvLJ38xOmGwghVj_cbjFPjpMTgH8WYd8I-BJssbZlrM6iMct9jeq5SXpTcStAPQurtTglXyZ_S1TO6eGIGN_HuPbqSRCXXlZRMFyBF7qvoNlo7AjjGKMn_Ao_RFRKBXWmTqdF6BomLVv6f3BaYuVP91PWjIgZyNXQ-FXl-P5cMjQ4PYkftt9Islx5-TXZ9KsMonliUOnGPsXNn4NsXx5loEJZBM36Lx5bQ1jpmXhHGTAb_v7PtTqVMi5Ze2aBOs"/>
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold border-2 border-background-dark">+3</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Glassmorphic Bottom Navigation -->
+<nav class="absolute bottom-6 left-6 right-6 h-20 glass rounded-full flex items-center justify-around px-4 shadow-2xl">
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full group-hover:bg-primary/20 transition-all duration-300">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">home</span>
+</div>
+<span class="text-[10px] font-bold text-primary">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full group-hover:bg-primary/20 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">folder</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Projects</span>
+</a>
+<div class="relative -top-8">
+<button class="size-14 bg-primary rounded-full flex items-center justify-center text-white shadow-lg glow-primary border-4 border-background-dark">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full group-hover:bg-primary/20 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">group</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Leads</span>
+</a>
+<a class="flex flex-col items-center gap-1 group" href="#">
+<div class="p-2 rounded-full group-hover:bg-primary/20 transition-all duration-300">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">account_circle</span>
+</div>
+<span class="text-[10px] font-bold text-slate-400 group-hover:text-primary">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

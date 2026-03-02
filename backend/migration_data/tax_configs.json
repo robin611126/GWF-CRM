@@ -1,0 +1,18 @@
+[
+  {
+    "id": "8a85037a-8e4c-43ea-b131-b4360045367a",
+    "name": "GST",
+    "rate": 18,
+    "is_default": 1,
+    "created_at": 1772268755021,
+    "updated_at": 1772268755021
+  },
+  {
+    "id": "acc386d6-ac19-41bf-bbf9-fd83c94d7386",
+    "name": "IGST",
+    "rate": 18,
+    "is_default": 0,
+    "created_at": 1772268755026,
+    "updated_at": 1772268755026
+  }
+]

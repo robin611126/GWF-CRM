@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM - Client Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#18202f",
+                        "border-dark": "#2a3447",
+                        "text-secondary": "#9da6b9"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark border-x border-border-dark shadow-2xl">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between bg-surface-dark/95 px-4 py-3 backdrop-blur border-b border-border-dark">
+<div class="flex items-center gap-3">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-100 hover:bg-slate-700/30">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight">Client Profile</h1>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-primary hover:bg-slate-700/30">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-100 hover:bg-slate-700/30">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Company Header Card -->
+<div class="bg-surface-dark border-b border-border-dark p-6">
+<div class="flex flex-col items-center gap-4 text-center">
+<div class="relative h-24 w-24 rounded-full border-4 border-background-dark bg-slate-800 shadow-xl overflow-hidden">
+<img alt="Modern corporate office building glass facade" class="h-full w-full object-cover" data-alt="Modern corporate office building glass facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Sn7_AVmSu4b4TRCwNyQN7gJQHlLLRwBQ7NW_rB4vYjFbbjM6yK6VhhNDHD3kXOZ5yEoJaFUl_gnbgV64bUa8FRIXB1xFMneG8o3NgEy-VjaKcJfX4nqpNAt5NsLtye5t6LDu3fwg5OP12-I3Ak-arvCC89IaE7JOPOIi0olF8GXUOvykuRrQnosCbBznKka83u_arxV-6BO-RQq9u0Vj5YGbOrFeXOH_CBWFb6jHRzD5zspABSgtopd6KjV1D194V2em-ED6tuy1"/>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-white">TechFlow Solutions</h2>
+<div class="mt-1 flex items-center justify-center gap-2 text-sm text-text-secondary">
+<span class="inline-flex items-center gap-1">
+<span class="h-2 w-2 rounded-full bg-green-500"></span>
+                                Active Client
+                            </span>
+<span>•</span>
+<span>Since 2022</span>
+</div>
+</div>
+<div class="flex w-full justify-center gap-3 mt-2">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-2.5 px-4 text-sm font-semibold text-white shadow-lg shadow-primary/20 hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+                            Call
+                        </button>
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-border-dark/50 border border-border-dark py-2.5 px-4 text-sm font-semibold text-white hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+                            Email
+                        </button>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 gap-3 p-4">
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark p-4 border border-border-dark">
+<div class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">monetization_on</span>
+<span class="text-xs font-medium uppercase tracking-wider">LTV</span>
+</div>
+<p class="text-xl font-bold text-white">$45,200</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl bg-surface-dark p-4 border border-border-dark">
+<div class="flex items-center gap-2 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+<span class="text-xs font-medium uppercase tracking-wider">Projects</span>
+</div>
+<p class="text-xl font-bold text-white">3 Active</p>
+</div>
+</div>
+<!-- Client Details Section -->
+<div class="px-4 pb-2">
+<div class="flex items-center justify-between pb-3 pt-2">
+<h3 class="text-base font-bold text-white">Company Details</h3>
+</div>
+<div class="rounded-xl bg-surface-dark border border-border-dark overflow-hidden">
+<div class="flex items-center justify-between border-b border-border-dark p-4">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div>
+<p class="text-xs font-medium text-text-secondary">Industry</p>
+<p class="text-sm font-medium text-white">SaaS &amp; Enterprise Software</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-b border-border-dark p-4">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div>
+<p class="text-xs font-medium text-text-secondary">Location</p>
+<p class="text-sm font-medium text-white">San Francisco, CA</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<p class="text-xs font-medium text-text-secondary">GST / Tax ID</p>
+<p class="text-sm font-medium text-white font-mono">US-9928-1120-X</p>
+</div>
+</div>
+<button class="text-text-secondary hover:text-white">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Infrastructure & Hosting -->
+<div class="px-4 pb-2 mt-4">
+<div class="flex items-center justify-between pb-3">
+<h3 class="text-base font-bold text-white">Infrastructure</h3>
+<span class="rounded-full bg-green-500/10 px-2 py-0.5 text-xs font-medium text-green-500 border border-green-500/20">All Systems Operational</span>
+</div>
+<div class="rounded-xl bg-surface-dark border border-border-dark overflow-hidden mb-4">
+<div class="bg-border-dark/30 px-4 py-2 border-b border-border-dark flex justify-between items-center">
+<span class="text-xs font-bold uppercase tracking-wider text-text-secondary">Hosting &amp; Domain</span>
+<span class="material-symbols-outlined text-text-secondary text-[16px]">dns</span>
+</div>
+<div class="p-4 grid gap-4">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xs text-text-secondary mb-1">Primary Domain</p>
+<a class="text-sm font-medium text-primary hover:underline flex items-center gap-1" href="#">
+                                    techflow.io
+                                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<p class="text-[10px] text-text-secondary mt-1">Expires: Dec 24, 2024</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-text-secondary mb-1">Provider</p>
+<p class="text-sm font-medium text-white">Cloudflare</p>
+</div>
+</div>
+<div class="h-px w-full bg-border-dark"></div>
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xs text-text-secondary mb-1">Service Plan</p>
+<p class="text-sm font-bold text-white">Enterprise Scale</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-text-secondary mb-1">Monthly Cost</p>
+<p class="text-sm font-medium text-white">$450.00/mo</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secured Credentials Accordion -->
+<div class="rounded-xl bg-surface-dark border border-border-dark overflow-hidden">
+<div class="bg-border-dark/30 px-4 py-2 border-b border-border-dark flex justify-between items-center">
+<span class="text-xs font-bold uppercase tracking-wider text-text-secondary">Access Credentials</span>
+<span class="material-symbols-outlined text-text-secondary text-[16px]">lock</span>
+</div>
+<div class="divide-y divide-border-dark">
+<div class="flex items-center justify-between p-4 hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">terminal</span>
+<div>
+<p class="text-sm font-medium text-white">SSH Root Access</p>
+<p class="text-xs text-text-secondary">Last updated 2 days ago</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary text-[20px]">visibility_off</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">database</span>
+<div>
+<p class="text-sm font-medium text-white">PostgreSQL Admin</p>
+<p class="text-xs text-text-secondary">Master DB Instance</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary text-[20px]">visibility_off</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-white/5 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">admin_panel_settings</span>
+<div>
+<p class="text-sm font-medium text-white">WP Admin</p>
+<p class="text-xs text-text-secondary">Content Management</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary text-[20px]">visibility_off</span>
+</div>
+</div>
+<div class="p-3 bg-red-500/10 text-center border-t border-border-dark">
+<p class="text-xs text-red-400 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                            Encrypted &amp; Logged Access Only
+                        </p>
+</div>
+</div>
+</div>
+<!-- Historic Data & Projects -->
+<div class="px-4 pb-2 mt-4">
+<h3 class="text-base font-bold text-white mb-3">Activities &amp; History</h3>
+<div class="space-y-3">
+<!-- Lead History Link -->
+<a class="flex items-center justify-between rounded-xl bg-surface-dark border border-border-dark p-4 hover:border-primary transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white">Lead History</p>
+<p class="text-xs text-text-secondary">View initial acquisition data</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">chevron_right</span>
+</a>
+<!-- Active Projects Link -->
+<a class="flex items-center justify-between rounded-xl bg-surface-dark border border-border-dark p-4 hover:border-primary transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10 text-purple-500">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white">Active Projects (2)</p>
+<p class="text-xs text-text-secondary">Website Redesign, SEO Campaign</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">chevron_right</span>
+</a>
+<!-- Invoices Link -->
+<a class="flex items-center justify-between rounded-xl bg-surface-dark border border-border-dark p-4 hover:border-primary transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10 text-green-500">
+<span class="material-symbols-outlined">receipt</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white">Financials</p>
+<p class="text-xs text-text-secondary">1 Invoice Pending</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="h-6"></div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="flex gap-2 border-t border-border-dark bg-surface-dark px-4 pb-6 pt-2 shrink-0">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px] fill-current">group</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Clients</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">folder</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-text-secondary hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">attach_money</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Finance</p>
+</a>
+</nav>
+</div>
+</body></html>

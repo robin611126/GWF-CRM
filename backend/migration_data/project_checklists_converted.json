@@ -1,0 +1,852 @@
+[
+  {
+    "id": "9da893d6-cb92-430c-81ee-2a41470e4630",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Requirements & Scope Finalized",
+    "is_completed": false,
+    "sort_order": 0,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T13:12:10.334Z"
+  },
+  {
+    "id": "a4ebe255-b50c-4698-aac7-7238b19b23d3",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "UI/UX Design & Wireframes",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T13:12:11.640Z"
+  },
+  {
+    "id": "1373d41d-27ec-41e8-b931-b8ce14d38f93",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Design Approved by Client",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "9aa429b3-c97f-4f13-b21e-79bfd2c0e767",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Framework & Tech Stack Setup",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "ce4d5ceb-eb50-42b9-82a8-635420a6125f",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Homepage Development",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "8ed7802d-f82d-4dbb-bb74-38b3fdf97871",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Inner Pages Development",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "e49804b6-dc26-4d24-a433-90d213de24b5",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Content Integration",
+    "is_completed": false,
+    "sort_order": 6,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "2a5685cc-f2d6-41ab-8d32-052a0ffe48ae",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Contact Forms & CTAs",
+    "is_completed": false,
+    "sort_order": 7,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "4c9ac7b4-acb5-43f5-b696-e51436c149ca",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Mobile Responsiveness",
+    "is_completed": false,
+    "sort_order": 8,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "29b3799e-c939-48ce-9f25-7a4a4913b0a6",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "SEO Setup & Meta Tags",
+    "is_completed": false,
+    "sort_order": 9,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "7a39dfbe-c991-4ad6-8716-611edbf999c6",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Domain & Hosting Configuration",
+    "is_completed": false,
+    "sort_order": 10,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "3eeb2653-e9f7-4b4c-a766-6a1607f1aaf0",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "SSL Certificate Setup",
+    "is_completed": false,
+    "sort_order": 11,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "867ab794-579e-4ac8-9a2a-028d2d38afd6",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 12,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "9ad883fb-7ae1-4a75-b574-af31815ce9f2",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Client Review & Feedback",
+    "is_completed": false,
+    "sort_order": 13,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "a4d22110-263b-4380-a12a-258179a8c3c4",
+    "project_id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "label": "Go Live & Deployment",
+    "is_completed": false,
+    "sort_order": 14,
+    "completed_at": null,
+    "created_at": "2026-02-28T12:46:43.893Z",
+    "updated_at": "2026-02-28T12:46:43.893Z"
+  },
+  {
+    "id": "566da086-fdcf-43c1-952e-79d5ef4e13fc",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Requirements & Scope Finalized",
+    "is_completed": false,
+    "sort_order": 0,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "18090095-e293-4ed2-b8c3-ab06ff4e09bb",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "UI/UX Design & Wireframes",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "99f5409e-93bb-4962-94b8-367022c266b8",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Design Approved by Client",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "a621effb-fa5c-492f-8010-f04f15747ec1",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Framework & Tech Stack Setup",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "6b1e4431-74e0-4277-9d2e-2769b7455ddc",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Homepage Development",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "6cfb8e65-d002-4355-8ba9-811e8a9f5e35",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Inner Pages Development",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "a7b31a76-035b-43c6-b638-91267f681d39",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Content Integration",
+    "is_completed": false,
+    "sort_order": 6,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "eca988d6-3f8f-4630-a14a-9f49dae83090",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Contact Forms & CTAs",
+    "is_completed": false,
+    "sort_order": 7,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "282e2fa4-2f4d-4817-806f-3395a38f1ba5",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Mobile Responsiveness",
+    "is_completed": false,
+    "sort_order": 8,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "1597f079-9cbe-4e72-ab7a-4bbc83f181cc",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "SEO Setup & Meta Tags",
+    "is_completed": false,
+    "sort_order": 9,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "c059bec8-6e95-4cff-b0d2-c23a1c4b4001",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Domain & Hosting Configuration",
+    "is_completed": false,
+    "sort_order": 10,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "e99c2fb4-c453-4121-a3b1-c03ce2e561f4",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "SSL Certificate Setup",
+    "is_completed": false,
+    "sort_order": 11,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "3e49d46e-d567-4de9-a970-b23a2a8c49f6",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 12,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "dcdf4563-5dd4-4bfa-8f8a-11da1f0df416",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Client Review & Feedback",
+    "is_completed": false,
+    "sort_order": 13,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "8b7ce1c1-636c-4861-ae7a-c5cfd4e19e25",
+    "project_id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "label": "Go Live & Deployment",
+    "is_completed": false,
+    "sort_order": 14,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:35:06.826Z",
+    "updated_at": "2026-03-01T05:35:06.826Z"
+  },
+  {
+    "id": "059737fc-387c-4cab-b59d-5f4e84dc96df",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "label": "Requirements Gathering",
+    "is_completed": true,
+    "sort_order": 1,
+    "completed_at": "2026-03-01T09:48:59.939Z",
+    "created_at": "2026-03-01T05:49:09.055Z",
+    "updated_at": "2026-03-01T09:48:59.944Z"
+  },
+  {
+    "id": "0dde509e-1093-411a-b402-aeb4fdddd9bb",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "label": "Design Phase",
+    "is_completed": true,
+    "sort_order": 2,
+    "completed_at": "2026-03-01T09:49:01.025Z",
+    "created_at": "2026-03-01T05:49:09.055Z",
+    "updated_at": "2026-03-01T09:49:01.027Z"
+  },
+  {
+    "id": "aa09c05c-b69f-4c57-b625-0bee96e70495",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "label": "Development",
+    "is_completed": true,
+    "sort_order": 3,
+    "completed_at": "2026-03-01T09:49:02.189Z",
+    "created_at": "2026-03-01T05:49:09.055Z",
+    "updated_at": "2026-03-01T09:49:02.191Z"
+  },
+  {
+    "id": "d1fb2414-f1cf-4f7e-afa2-1a1c55135a17",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "label": "Testing & QA",
+    "is_completed": true,
+    "sort_order": 4,
+    "completed_at": "2026-03-01T12:29:18.298Z",
+    "created_at": "2026-03-01T05:49:09.055Z",
+    "updated_at": "2026-03-01T12:29:18.300Z"
+  },
+  {
+    "id": "a63be6ca-2188-443a-8056-f243228e1763",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "label": "Deployment & Handover",
+    "is_completed": true,
+    "sort_order": 5,
+    "completed_at": "2026-03-01T12:29:21.831Z",
+    "created_at": "2026-03-01T05:49:09.055Z",
+    "updated_at": "2026-03-01T12:29:21.833Z"
+  },
+  {
+    "id": "eaac7693-2758-440c-86d0-7c53a9abd93a",
+    "project_id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "label": "Requirements Gathering",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:17.306Z",
+    "updated_at": "2026-03-01T05:54:17.306Z"
+  },
+  {
+    "id": "0f8137f5-3ed3-465b-b843-0394772f0a9b",
+    "project_id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "label": "Design Phase",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:17.306Z",
+    "updated_at": "2026-03-01T05:54:17.306Z"
+  },
+  {
+    "id": "33bf34c4-3ce9-4266-9250-89b2acaab8a5",
+    "project_id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "label": "Development",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:17.306Z",
+    "updated_at": "2026-03-01T05:54:17.306Z"
+  },
+  {
+    "id": "4cfb70df-d0f2-4af7-ab42-8873939b9c02",
+    "project_id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:17.306Z",
+    "updated_at": "2026-03-01T05:54:17.306Z"
+  },
+  {
+    "id": "edc4a2fe-319d-40c0-b7fb-ab3566c16269",
+    "project_id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "label": "Deployment & Handover",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:17.306Z",
+    "updated_at": "2026-03-01T05:54:17.306Z"
+  },
+  {
+    "id": "61b7bd0d-fdb5-4cde-835a-9c7641fa0d46",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Requirements & Scope Finalized",
+    "is_completed": false,
+    "sort_order": 0,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "a202710f-23c0-46bc-b1f2-84689c7d3710",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "UI/UX Design & Wireframes",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "80c7b085-429d-4abf-986b-f2a176819ac5",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Design Approved by Client",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "9f3597d3-a3a9-469c-a940-329bca1dfcc8",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Framework & Tech Stack Setup",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "c062cad1-9db6-4576-8066-322ddc7273ec",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Homepage Development",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "1a14e7ae-5460-4047-b1fc-53eb539a7370",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Inner Pages Development",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "fc11f913-96ac-4820-8d1c-f8e6ab7aa061",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Content Integration",
+    "is_completed": false,
+    "sort_order": 6,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "c46d5f7f-298e-4f7b-ba84-60e2fc6f77c0",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Contact Forms & CTAs",
+    "is_completed": false,
+    "sort_order": 7,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "538b5c7d-bb58-4a06-ba66-03d05321ce59",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Mobile Responsiveness",
+    "is_completed": false,
+    "sort_order": 8,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "e7ad9e96-d258-4d90-b54c-62d5aa9d5e6e",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "SEO Setup & Meta Tags",
+    "is_completed": false,
+    "sort_order": 9,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "b84e709b-e685-476e-ad54-069d87d3a997",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Domain & Hosting Configuration",
+    "is_completed": false,
+    "sort_order": 10,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "7a083c05-0087-499c-86e0-87e857570b18",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "SSL Certificate Setup",
+    "is_completed": false,
+    "sort_order": 11,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "42ab3669-edbd-4592-9757-f10292045336",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 12,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "82e5b2af-33fa-420f-ab27-c0cb6f0de44c",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Client Review & Feedback",
+    "is_completed": false,
+    "sort_order": 13,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "51087c0b-8696-46c9-a1ff-2e328818c579",
+    "project_id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "label": "Go Live & Deployment",
+    "is_completed": false,
+    "sort_order": 14,
+    "completed_at": null,
+    "created_at": "2026-03-01T05:54:59.861Z",
+    "updated_at": "2026-03-01T05:54:59.861Z"
+  },
+  {
+    "id": "bc3fd29d-2a23-4c9d-b1b0-078af404eae7",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Requirements & Scope Finalized",
+    "is_completed": false,
+    "sort_order": 0,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "6f858f9c-ba90-443c-bced-64feb8dacd63",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "UI/UX Design & Wireframes",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "eb586877-16be-4ab3-a255-56f2c76bd7fe",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Design Approved by Client",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "e9ac5896-05a5-4484-b32d-f4598153d31d",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Framework & Tech Stack Setup",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "a62324cd-8b6b-47d1-bc6c-ec81eea34378",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Homepage Development",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "0b3eeb61-b249-49b4-abbc-db79d8e076ef",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Inner Pages Development",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "f21c6c25-514a-4293-8cd0-159dd9e3f11f",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Content Integration",
+    "is_completed": false,
+    "sort_order": 6,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "dffe4778-b1f8-481a-8065-caa535b8bedc",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Contact Forms & CTAs",
+    "is_completed": false,
+    "sort_order": 7,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "8f0c0364-e8b7-4b45-910e-b6a591aa4051",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Mobile Responsiveness",
+    "is_completed": false,
+    "sort_order": 8,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "b57cc42d-0fe5-405f-bbee-39b01a7b05a6",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "SEO Setup & Meta Tags",
+    "is_completed": false,
+    "sort_order": 9,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "d09300dd-f1a2-494f-bd15-2635e01e4777",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Domain & Hosting Configuration",
+    "is_completed": false,
+    "sort_order": 10,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "a2ba6815-594d-42af-b696-ae8b8908b04c",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "SSL Certificate Setup",
+    "is_completed": false,
+    "sort_order": 11,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "6273b46f-8678-4405-8298-beb0c6ad0e2b",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 12,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "c2a8cfb9-1d46-4378-967f-0199c7d7e3ef",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Client Review & Feedback",
+    "is_completed": false,
+    "sort_order": 13,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "38dc003d-0147-453c-ba18-968a1718ef0f",
+    "project_id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "label": "Go Live & Deployment",
+    "is_completed": false,
+    "sort_order": 14,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:26.911Z",
+    "updated_at": "2026-03-01T06:01:26.911Z"
+  },
+  {
+    "id": "7d3022cc-3ef0-4d2f-92ea-4625d8739d48",
+    "project_id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "label": "Requirements Gathering",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:50.279Z",
+    "updated_at": "2026-03-01T06:01:50.279Z"
+  },
+  {
+    "id": "e40a870e-df8b-4952-8041-f391d0060047",
+    "project_id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "label": "Design Phase",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:50.279Z",
+    "updated_at": "2026-03-01T06:01:50.279Z"
+  },
+  {
+    "id": "d06ef822-6757-456e-866e-d42f40b2a3e1",
+    "project_id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "label": "Development",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:50.279Z",
+    "updated_at": "2026-03-01T06:01:50.279Z"
+  },
+  {
+    "id": "15e4dfbf-dc5a-40fb-96aa-0e50f9093c83",
+    "project_id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:50.279Z",
+    "updated_at": "2026-03-01T06:01:50.279Z"
+  },
+  {
+    "id": "107165cc-6b85-4a97-a4c9-043224f9ba69",
+    "project_id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "label": "Deployment & Handover",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:01:50.279Z",
+    "updated_at": "2026-03-01T06:01:50.279Z"
+  },
+  {
+    "id": "8e820f16-65e6-4698-a55e-5ce43f1142db",
+    "project_id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "label": "Requirements Gathering",
+    "is_completed": false,
+    "sort_order": 1,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:03:36.604Z",
+    "updated_at": "2026-03-01T06:03:36.604Z"
+  },
+  {
+    "id": "6842da94-54a5-4a1c-9ab3-539c30859cd6",
+    "project_id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "label": "Design Phase",
+    "is_completed": false,
+    "sort_order": 2,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:03:36.604Z",
+    "updated_at": "2026-03-01T06:03:36.604Z"
+  },
+  {
+    "id": "4adf0046-c273-4053-9037-ad1190c34485",
+    "project_id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "label": "Development",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:03:36.604Z",
+    "updated_at": "2026-03-01T06:03:36.604Z"
+  },
+  {
+    "id": "546243ee-3869-4a34-8dda-357a2f348b6d",
+    "project_id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:03:36.604Z",
+    "updated_at": "2026-03-01T06:03:36.604Z"
+  },
+  {
+    "id": "047b3dde-a3d6-44cc-b081-a0fa3f141bc3",
+    "project_id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "label": "Deployment & Handover",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T06:03:36.604Z",
+    "updated_at": "2026-03-01T06:03:36.604Z"
+  },
+  {
+    "id": "799c35b6-8226-4ce4-9771-0bac31be3806",
+    "project_id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "label": "Requirements Gathering",
+    "is_completed": true,
+    "sort_order": 1,
+    "completed_at": "2026-03-01T13:33:59.369Z",
+    "created_at": "2026-03-01T13:32:38.984Z",
+    "updated_at": "2026-03-01T13:33:59.370Z"
+  },
+  {
+    "id": "5892e143-8e89-4432-a1d1-3d40b777167b",
+    "project_id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "label": "Design Phase",
+    "is_completed": true,
+    "sort_order": 2,
+    "completed_at": "2026-03-01T13:33:58.233Z",
+    "created_at": "2026-03-01T13:32:38.984Z",
+    "updated_at": "2026-03-01T13:33:58.250Z"
+  },
+  {
+    "id": "cb2aeef8-6c03-4f41-8a4c-d648a356b37b",
+    "project_id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "label": "Development",
+    "is_completed": false,
+    "sort_order": 3,
+    "completed_at": null,
+    "created_at": "2026-03-01T13:32:38.984Z",
+    "updated_at": "2026-03-01T13:32:38.984Z"
+  },
+  {
+    "id": "ff7865ac-16af-4185-8d44-2774841e7cae",
+    "project_id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "label": "Testing & QA",
+    "is_completed": false,
+    "sort_order": 4,
+    "completed_at": null,
+    "created_at": "2026-03-01T13:32:38.984Z",
+    "updated_at": "2026-03-01T13:32:38.984Z"
+  },
+  {
+    "id": "fec6320e-d58c-4183-9493-a0ecf8af8d02",
+    "project_id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "label": "Deployment & Handover",
+    "is_completed": false,
+    "sort_order": 5,
+    "completed_at": null,
+    "created_at": "2026-03-01T13:32:38.984Z",
+    "updated_at": "2026-03-01T13:32:38.984Z"
+  }
+]

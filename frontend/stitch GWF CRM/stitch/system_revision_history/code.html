@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Revision History - GWF CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282e39;
+            border-radius: 4px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col overflow-hidden">
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col h-full overflow-hidden relative w-full max-w-md mx-auto bg-background-light dark:bg-background-dark border-x border-slate-200 dark:border-slate-800 shadow-2xl">
+<!-- Header -->
+<div class="flex items-center px-4 pt-6 pb-2 justify-between bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">Audit Log</h2>
+<div class="flex w-12 items-center justify-end absolute right-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-transparent hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2 bg-background-light dark:bg-background-dark">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-slate-500 dark:text-slate-400 flex bg-white dark:bg-[#1c2333] items-center justify-center pl-4 rounded-l-xl border border-r-0 border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-slate-200 dark:border-slate-700 bg-white dark:bg-[#1c2333] h-full placeholder:text-slate-400 dark:placeholder:text-slate-500 px-4 pl-2 text-base font-normal leading-normal transition-all" placeholder="Search revisions..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filters Scroll -->
+<div class="flex gap-2 px-4 py-2 overflow-x-auto no-scrollbar pb-4 bg-background-light dark:bg-background-dark border-b border-slate-200 dark:border-slate-800/50">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 hover:opacity-90 transition-opacity">
+<span class="text-xs font-semibold">All Changes</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1c2333] border border-slate-200 dark:border-slate-700 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-medium">Leads</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1c2333] border border-slate-200 dark:border-slate-700 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-medium">Projects</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1c2333] border border-slate-200 dark:border-slate-700 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-medium">Users</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1c2333] border border-slate-200 dark:border-slate-700 px-4 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="text-slate-600 dark:text-slate-300 text-xs font-medium">Invoices</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark relative">
+<!-- Timeline Line -->
+<div class="absolute left-[27px] top-4 bottom-0 w-px bg-slate-200 dark:bg-slate-800 z-0"></div>
+<!-- Group: Today -->
+<div class="relative z-10 pb-6">
+<div class="sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-3 px-4 z-20 border-b border-slate-200 dark:border-slate-800/50 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider">Today</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Oct 24, 2023</span>
+</div>
+<!-- Item 1 -->
+<div class="group relative flex gap-4 px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#161b26] transition-colors cursor-pointer">
+<div class="relative mt-1">
+<div class="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 text-primary">
+<img alt="Sarah J" class="h-full w-full rounded-full object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVRSlBzlnYobLsjvJ1aTl3yh4ZoxrSWy4lEW6JozPtA_3yxJ9Olri6KJGlGkns79NCxizOYFBWfcMcDdhlvjPbhtYfqk4-NXAHQVyBcd2rnF3eIRSZOSmskjqSIlPN5BT7uGRkQJb1VVE80xQTUavSjjdQZNHPBwmw1f3v8Qnte0c1fVQ6KG-ZOHubzKNMk5rGHo3Qv7UkrOEAY7OSG_IdVFQ-DMdDb7oSossv3atRQk9h02hNGl1fPzmac5Ufi0TyiCN-MHZPjpal"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-background-light dark:bg-background-dark rounded-full p-0.5">
+<div class="bg-primary/20 text-primary rounded-full p-0.5">
+<span class="material-symbols-outlined text-[10px] block font-bold">edit</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">
+                                Lead Status Updated
+                            </p>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap ml-2">2 min ago</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+<span class="font-medium text-slate-700 dark:text-slate-300">Sarah Jenkins</span> modified <span class="font-medium text-slate-700 dark:text-slate-300">Acme Corp Lead #402</span>
+</p>
+<!-- Diff Box -->
+<div class="bg-white dark:bg-[#1c2333] rounded-lg border border-slate-200 dark:border-slate-700/50 p-2 text-xs grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">Field</span>
+<span class="text-slate-700 dark:text-slate-300 font-medium">Status</span>
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">From</span>
+<span class="text-red-500/80 dark:text-red-400/80 line-through">New Inquiry</span>
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">To</span>
+<span class="text-green-600 dark:text-green-400 font-bold bg-green-500/10 px-1.5 py-0.5 rounded w-fit">Negotiation</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative flex gap-4 px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#161b26] transition-colors cursor-pointer">
+<div class="relative mt-1">
+<div class="h-8 w-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center border border-purple-200 dark:border-purple-800 text-purple-600 dark:text-purple-400">
+<div class="text-xs font-bold">MJ</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-background-light dark:bg-background-dark rounded-full p-0.5">
+<div class="bg-purple-500/20 text-purple-500 rounded-full p-0.5">
+<span class="material-symbols-outlined text-[10px] block font-bold">add</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">
+                                New Project Created
+                            </p>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap ml-2">10:42 AM</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">
+<span class="font-medium text-slate-700 dark:text-slate-300">Michael Jordan</span> created project <span class="font-medium text-slate-700 dark:text-slate-300">Q4 Marketing Campaign</span>
+</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative flex gap-4 px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#161b26] transition-colors cursor-pointer">
+<div class="relative mt-1">
+<div class="h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-400">
+<img alt="Sys Admin" class="h-full w-full rounded-full object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlzhJEUlyJBFklo2_g0sRN0xxz04cun6Hrg5aI7V4HUlAJk0xEsAjNaP24J6L8sV5h4O90bkjb-WLe7925N_WeB37FwZOscP1dgUXz-zq6lW7OXD1FFgb9lx6TVjOSkbVtMD5Opwe6j_zppELpUGWrZfOTQpAklu7H7RaqsUKHAuSDmzSg8_ysgILyBTouWb_u9YDESvfAazNiTJlggHY5mJTSFfwMdeqPF-bGWQs3VFmiQ_3UzXLz-T4-FbcZ2wVM95XF1s2-dKL9"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-background-light dark:bg-background-dark rounded-full p-0.5">
+<div class="bg-red-500/20 text-red-500 rounded-full p-0.5">
+<span class="material-symbols-outlined text-[10px] block font-bold">delete</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">
+                                Note Deleted
+                            </p>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap ml-2">09:15 AM</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+<span class="font-medium text-slate-700 dark:text-slate-300">System Admin</span> removed a note from <span class="font-medium text-slate-700 dark:text-slate-300">Contact: John Doe</span>
+</p>
+<div class="bg-red-50 dark:bg-red-900/10 rounded-lg border border-red-100 dark:border-red-900/30 p-2 text-xs">
+<p class="text-slate-500 dark:text-slate-400 italic">"Client requested to remove this specific note due to..."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Yesterday -->
+<div class="relative z-10 pb-20">
+<div class="sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-3 px-4 z-20 border-b border-slate-200 dark:border-slate-800/50 flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-sm font-bold uppercase tracking-wider">Yesterday</h3>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Oct 23, 2023</span>
+</div>
+<!-- Item 4 -->
+<div class="group relative flex gap-4 px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#161b26] transition-colors cursor-pointer">
+<div class="relative mt-1">
+<div class="h-8 w-8 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center border border-orange-200 dark:border-orange-800 text-orange-600 dark:text-orange-400">
+<div class="text-xs font-bold">AL</div>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-background-light dark:bg-background-dark rounded-full p-0.5">
+<div class="bg-primary/20 text-primary rounded-full p-0.5">
+<span class="material-symbols-outlined text-[10px] block font-bold">edit</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">
+                                Budget Adjustment
+                            </p>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap ml-2">4:30 PM</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+<span class="font-medium text-slate-700 dark:text-slate-300">Alex Lee</span> updated <span class="font-medium text-slate-700 dark:text-slate-300">Project Alpha</span>
+</p>
+<div class="bg-white dark:bg-[#1c2333] rounded-lg border border-slate-200 dark:border-slate-700/50 p-2 text-xs grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">Field</span>
+<span class="text-slate-700 dark:text-slate-300 font-medium">Budget</span>
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">From</span>
+<span class="text-slate-500 dark:text-slate-400 font-mono">$5,000.00</span>
+<span class="text-slate-400 dark:text-slate-500 font-medium uppercase text-[10px] tracking-wide self-center">To</span>
+<span class="text-primary font-bold font-mono">$7,500.00</span>
+</div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="group relative flex gap-4 px-4 py-3 hover:bg-slate-100 dark:hover:bg-[#161b26] transition-colors cursor-pointer">
+<div class="relative mt-1">
+<div class="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center border border-blue-200 dark:border-blue-800 text-primary">
+<img alt="Sarah J" class="h-full w-full rounded-full object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCewbsVnngS4YXCmYQGVBh-XW0jDIPAQHT2z30kNobkml0gMUC_IpXnq20p-mRhAr9w72LkQyfFCS9G_1WLQsMGKLF2QMKmsojJWfa0HlEvd3nrinmjuEHdB7T68XZeN_1N9AJG4yd_gMZxtgoUCQyT8OI6NSdui2UJr8gw1vQwklJdoZqAJ3iu48Rx9VUaA1lLFGaUNe5xAgZYZ66kskdpZmWODEHGuUWi_3Qr59Ik3V2HiDvQ9qpZsUndM7qCdauASsPhuyFQjhPC"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-background-light dark:bg-background-dark rounded-full p-0.5">
+<div class="bg-primary/20 text-primary rounded-full p-0.5">
+<span class="material-symbols-outlined text-[10px] block font-bold">edit</span>
+</div>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">
+                                Assignee Changed
+                            </p>
+<span class="text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap ml-2">2:15 PM</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">
+<span class="font-medium text-slate-700 dark:text-slate-300">Sarah Jenkins</span> reassigned <span class="font-medium text-slate-700 dark:text-slate-300">Task #882</span>
+</p>
+<div class="bg-white dark:bg-[#1c2333] rounded-lg border border-slate-200 dark:border-slate-700/50 p-2 text-xs flex items-center gap-2">
+<div class="flex items-center gap-1.5 opacity-60">
+<span class="h-4 w-4 rounded-full bg-slate-300 block"></span>
+<span class="line-through text-slate-500">Unassigned</span>
+</div>
+<span class="material-symbols-outlined text-[10px] text-slate-400">arrow_forward</span>
+<div class="flex items-center gap-1.5">
+<img alt="Dev" class="h-4 w-4 rounded-full" data-alt="Small user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu5q-NtXoBNNWrNZWP0albMiS_8RecbwZtskp2T3YRdnpin5F5PeKsdoqUSg6_quJbTeZsr9Rv9WTOWDfU_v2qrk5Zikck8Q4qrg9OBrslnr3DfS_PV5bflDPSLMDPRSHRESYMfFF5H8PFSuvPY2OWvGZ6agjRoJPWUjd-YnZoysOg1ckjFNk7SsBX6HQlvNHJyoAN5Dkqq0dTl6ybQtip2BxBwOor1vfRMrqPkyV2neluhbjE1Ov6UOdJehZwYhG0cdyP-3wrU4VQ"/>
+<span class="font-medium text-slate-700 dark:text-slate-200">Dev Team</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="flex justify-between items-center border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1c1f27] px-2 pb-safe pt-2 sticky bottom-0 z-50">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">dashboard</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">group</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Leads</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">folder_open</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-primary dark:text-white group" href="#">
+<span class="material-symbols-outlined text-[24px] fill-current group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1">history</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">History</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 p-2 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">settings</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Settings</p>
+</a>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#135bec",
+                "background-light": "#f6f6f8",
+                "background-dark": "#101622",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display flex flex-col items-center justify-center min-h-screen p-0 m-0">
+<div class="relative flex w-full max-w-md flex-col bg-background-light dark:bg-background-dark overflow-x-hidden min-h-screen sm:min-h-0 sm:h-auto sm:border sm:border-slate-200 sm:dark:border-slate-800 sm:rounded-xl shadow-none sm:shadow-lg">
+<!-- Top Bar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light dark:bg-background-dark z-10">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-center cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Login</h2>
+</div>
+<!-- Branding -->
+<div class="px-6 pt-8 pb-6 flex flex-col items-center">
+<div class="size-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">grid_view</span>
+</div>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center">GWF CRM</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal pt-2 text-center max-w-[280px]">Welcome back to your agency dashboard.</p>
+</div>
+<!-- Form -->
+<div class="flex flex-col gap-5 px-6 pb-8">
+<!-- Email Input -->
+<label class="flex flex-col gap-1.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Email Address</p>
+<div class="group flex w-full items-center rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#1c1f27] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden transition-all">
+<input class="w-full flex-1 bg-transparent px-4 py-3.5 text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none border-none ring-0 focus:ring-0" placeholder="name@getwebfast.com" type="email"/>
+<div class="pr-4 text-slate-400 dark:text-slate-500 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+</label>
+<!-- Password Input -->
+<label class="flex flex-col gap-1.5">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Password</p>
+<div class="group flex w-full items-center rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#1c1f27] focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden transition-all">
+<input class="w-full flex-1 bg-transparent px-4 py-3.5 text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none border-none ring-0 focus:ring-0" placeholder="Enter your password" type="password"/>
+<div class="pr-4 text-slate-400 dark:text-slate-500 flex items-center justify-center">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+</label>
+<!-- Actions Row -->
+<div class="flex items-center justify-between mt-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="form-checkbox size-5 rounded border-slate-300 bg-white dark:border-slate-600 dark:bg-slate-800 text-primary focus:ring-primary focus:ring-offset-0 transition duration-150 ease-in-out cursor-pointer" type="checkbox"/>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">Remember me</span>
+</label>
+<a class="text-sm font-semibold text-primary hover:text-primary/80 transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Submit Button -->
+<button class="mt-4 flex w-full items-center justify-center rounded-lg bg-primary py-3.5 px-4 text-base font-bold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-all">
+                Sign In
+            </button>
+<!-- Sign Up Link -->
+<p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
+                Don't have an account? <a class="font-semibold text-primary hover:text-primary/80" href="#">Create account</a>
+</p>
+</div>
+<!-- Bottom Spacer for mobile feeling -->
+<div class="h-5"></div>
+</div>
+</body></html>

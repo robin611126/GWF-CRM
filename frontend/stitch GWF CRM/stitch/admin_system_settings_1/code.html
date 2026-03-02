@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin System Settings - GWF CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1c2433", 
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-3 bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold">System Settings</h1>
+</div>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Search Bar (Optional for quick access) -->
+<div class="px-4 py-4">
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-[20px]">search</span>
+<input class="w-full bg-slate-100 dark:bg-surface-dark border-none rounded-xl py-3 pl-10 pr-4 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-primary/50" placeholder="Search settings..." type="text"/>
+</div>
+</div>
+<!-- Section: General -->
+<div class="mb-2">
+<h2 class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">General Administration</h2>
+<div class="bg-surface-light dark:bg-surface-dark mx-4 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<!-- User Management -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 shrink-0">
+<span class="material-symbols-outlined">manage_accounts</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">User Management</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Manage roles &amp; permissions (RBAC)</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Service Plans -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 shrink-0">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">Service Plans</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Configure tiers and pricing</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Agency Profile -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 shrink-0">
+<span class="material-symbols-outlined">domain</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">Agency Profile</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Logo, branding, and contact info</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section: Finance -->
+<div class="mb-2 mt-6">
+<h2 class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Financial Configuration</h2>
+<div class="bg-surface-light dark:bg-surface-dark mx-4 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<!-- Tax & Currency -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 shrink-0">
+<span class="material-symbols-outlined">currency_exchange</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">Tax &amp; Currency</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">VAT rates, default currency</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Invoicing Settings -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 shrink-0">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">Invoice Templates</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Customize layout &amp; terms</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section: System -->
+<div class="mb-6 mt-6">
+<h2 class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">System &amp; Security</h2>
+<div class="bg-surface-light dark:bg-surface-dark mx-4 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+<!-- Audit Logs -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 shrink-0">
+<span class="material-symbols-outlined">history</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">Revision History</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">View audit logs &amp; changes</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<!-- Integrations -->
+<button class="w-full flex items-center gap-4 p-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border-b border-slate-200 dark:border-slate-800 last:border-0 group">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 shrink-0">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div class="flex-1 text-left">
+<p class="text-base font-medium text-slate-900 dark:text-slate-100">API &amp; Integrations</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Webhooks, Keys, Third-party apps</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Version Info -->
+<div class="px-4 py-6 text-center">
+<p class="text-xs text-slate-400">GWF CRM v2.4.0 (Build 892)</p>
+<p class="text-xs text-slate-500 mt-1">© 2024 Get Web Fast. All rights reserved.</p>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="border-t border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-surface-dark pb-safe pt-2">
+<div class="flex justify-around items-end px-2 pb-3">
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">dashboard</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary transition-colors">Dashboard</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">folder_open</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary transition-colors">Projects</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<div class="w-12 h-12 -mt-6 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/40 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-white">add</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary transition-colors">New</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">groups</span>
+<span class="text-[10px] font-medium text-slate-400 group-hover:text-primary transition-colors">Leads</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-primary fill-current">settings</span>
+<span class="text-[10px] font-medium text-primary">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

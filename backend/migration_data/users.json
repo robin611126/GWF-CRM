@@ -1,0 +1,68 @@
+[
+  {
+    "id": "888491a4-f0f3-4b4f-a864-e9b4e81abe9d",
+    "email": "admin@gwfcrm.com",
+    "password_hash": "$2a$12$7cxb4Npb/LmErcbNCNJGwOme/DbBECU5dnSaEGuPECCby.bfGEsNi",
+    "first_name": "Shiva",
+    "last_name": "Kumar",
+    "role": "ADMIN",
+    "is_active": 1,
+    "created_at": 1772268754445,
+    "updated_at": 1772268754445
+  },
+  {
+    "id": "9bdc542b-d327-498f-a356-1973e7d63709",
+    "email": "sales@gwfcrm.com",
+    "password_hash": "$2a$12$.WWVgjvynrNbn.mjsBj0JevyikP2g3JQpvN6dr0EZdesUnh3pF0sW",
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "role": "SALES",
+    "is_active": 1,
+    "created_at": 1772268754965,
+    "updated_at": 1772268754965
+  },
+  {
+    "id": "1d83b85f-8695-41f7-8afd-75958236d367",
+    "email": "pm@gwfcrm.com",
+    "password_hash": "$2a$12$.WWVgjvynrNbn.mjsBj0JevyikP2g3JQpvN6dr0EZdesUnh3pF0sW",
+    "first_name": "Arjun",
+    "last_name": "Patel",
+    "role": "PROJECT_MANAGER",
+    "is_active": 1,
+    "created_at": 1772268754973,
+    "updated_at": 1772268754973
+  },
+  {
+    "id": "a3ab51e7-2a87-44b8-99bc-be12993e7e27",
+    "email": "dev@gwfcrm.com",
+    "password_hash": "$2a$12$.WWVgjvynrNbn.mjsBj0JevyikP2g3JQpvN6dr0EZdesUnh3pF0sW",
+    "first_name": "Rohit",
+    "last_name": "Verma",
+    "role": "DEVELOPER",
+    "is_active": 1,
+    "created_at": 1772268754979,
+    "updated_at": 1772268754979
+  },
+  {
+    "id": "d022368f-38aa-465a-abfd-0bf781b6ee62",
+    "email": "billing@gwfcrm.com",
+    "password_hash": "$2a$12$.WWVgjvynrNbn.mjsBj0JevyikP2g3JQpvN6dr0EZdesUnh3pF0sW",
+    "first_name": "Neha",
+    "last_name": "Gupta",
+    "role": "BILLING",
+    "is_active": 1,
+    "created_at": 1772268754986,
+    "updated_at": 1772268754986
+  },
+  {
+    "id": "15f0c556-7b35-44ca-969e-3193bea0c8c5",
+    "email": "faishalback@gmail.com",
+    "password_hash": "$2a$12$IWtmgwTfuvlofBkra103muLdAdO3q3CZ.pl2kqGJd1RXLytx07oNK",
+    "first_name": "FAISHAL",
+    "last_name": "AHMAD",
+    "role": "ADMIN",
+    "is_active": 1,
+    "created_at": 1772351868211,
+    "updated_at": 1772351868211
+  }
+]

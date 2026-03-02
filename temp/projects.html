@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM Projects List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8c1ff9",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#0a0a1a", // Deep dark base
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-dark {
+            background: rgba(15, 10, 35, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(140, 31, 249, 0.2);
+        }
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0a0a1a 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gradient-custom text-slate-100 font-display min-h-screen pb-24">
+<!-- Top Header Section -->
+<div class="sticky top-0 z-20 px-6 pt-12 pb-4 glass">
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-3xl font-extrabold tracking-tight text-white">Projects</h1>
+<button class="w-10 h-10 rounded-full glass flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-xl">search</span>
+</div>
+<input class="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all backdrop-blur-md" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex gap-3 px-6 py-4 overflow-x-auto no-scrollbar">
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/30">All</button>
+<button class="px-5 py-2 rounded-full glass text-slate-300 text-sm font-medium">Active</button>
+<button class="px-5 py-2 rounded-full glass text-slate-300 text-sm font-medium">On Hold</button>
+<button class="px-5 py-2 rounded-full glass text-slate-300 text-sm font-medium">Completed</button>
+</div>
+<!-- Project List -->
+<div class="px-6 flex flex-col gap-4 mt-2">
+<!-- Project Card 1 -->
+<div class="glass-dark p-5 rounded-xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Website Redesign</h3>
+<p class="text-slate-400 text-sm font-medium">Global Wildlife Fund</p>
+</div>
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Active</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-slate-400">
+<span>Progress</span>
+<span class="text-primary">75%</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_10px_rgba(140,31,249,0.5)] w-[75%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwQ9NoRUtmCehdYKKZDJFngzy5RwaxusAT2NAHnCc6NNEEAAZD8rusNrZF7igkj4IYQhV4ZDjrh0kgk1vxDGKcD8SP1vkGSXg1OhYe0px7pmu18LUlBKDe6rkAKSa2w3LhtOYGTwVWLmqvAZzUwlDWsoFu4Q1OHfFOGyMkzHRACbDbFaNkSCDVlRl82AhJw99R-P1LABkxyKVGC2Mrjv2WpNxhEHVwQ5o42yRGOsafjBZ6AfzjsNSNgmMTgwFiFYoHvZYuSyn3G5Y"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAteMmkpcdZIvG91KHv8UZn0iyjo9nVuKcsU4p2nAWwNTfdKSSE9_kPvtF6nDnCvOnaFmrDNi4C6sQZ6jdHhYKGfY2o25SyDC5u1Kq0xFkZesqsc0NjpkVrNlWnh1lh--7deQI6MHKS--drxI1KM3WldM4ParESFg2WVOVLXmETlD5bid8bW8ilEdbVcgupFeqqdy8lwZKxLgBoxyziQlLR_oaY0p1nszn0ZmsIkbsYZF2YrHT6-jZyXnVbwrVUhXA_E8O1WclQlm0"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxqQooJzWYhbYxCc1GeCnkDRp89MceECDOkmvyFmx-69jAvST7ZU9ZDb787gljS8uveaM1Sgs4Wvy04whvpnNjfwjTKCq9Mkp08SPsTtOjEc6CB82TxYw0LlBQ7Ni5oXLmp58BvMaWnC4dC1SGcbKkqtTBV2eOUzWIguMm-h8lhQue3x9oT9lbpFOmVvo_apnlhKOqYEYj6QyHsCmmKw2k84dkUQnuKuyNKOGTIUk2xdv27JYgVAvm81-Ltdo4IHJwDfGJgyUW8J0"/>
+<div class="w-8 h-8 rounded-full border-2 border-[#1e1b4b] bg-primary/40 flex items-center justify-center text-[10px] font-bold text-white">+2</div>
+</div>
+<p class="text-xs text-slate-500 font-medium">Due in 5 days</p>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="glass-dark p-5 rounded-xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Mobile App Audit</h3>
+<p class="text-slate-400 text-sm font-medium">TechNova Solutions</p>
+</div>
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30">On Hold</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-slate-400">
+<span>Progress</span>
+<span class="text-primary">32%</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_10px_rgba(140,31,249,0.5)] w-[32%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7PWzBOsvYnOrmtULs0tvLIEZGJ3NOeOZ44CkO8MCMn8Ntfqd0aWJPzezIsIKIW2P3Q8uPVw43JZyKhcJNtnJqe_hlwWf3HW4xdhdYc2_zqCgAt0MoAQjGi1Svioh-lLibWKiiLFUpqgdUtLlIBKsh7XkBpe_NRE2vMENpPPqKZIKszN2l2yyHgsB5dR2O_ZB5Af5unTf1e1m8u6iij2MPHG4vhSrsSSFE1VOzkFlgmx6AfhamVWt_xCbiOc1JDVVT-ZExb5yiO20"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABx4yM4ulqMnrg18jwZzc62cC3u6VSgTYjAejuez3Oc3-ghlTJglcBITLTCXHmtpwIKjmC5Z-syOsPaZ6WiW-_hDuoM0j6kZm2AczmRo0gvvXMVuxEtpk9mhWhzHl3csJgxIlEF-NqUhWPxFFd8w8q54SpEU80yBsicxEuCGQeaFh0SzSKibeI27I6sqz3FXYizmsWD-kO_7oFtHxyo9g1F0HVki2d-YjYSJLgvsLK6PMfgMc0bO17SsmO0qpee6313WZWucdOa_8"/>
+</div>
+<p class="text-xs text-slate-500 font-medium">Due in 12 days</p>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="glass-dark p-5 rounded-xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-white mb-1">Brand Identity 2024</h3>
+<p class="text-slate-400 text-sm font-medium">Aurora Media</p>
+</div>
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-primary/20 text-primary border border-primary/30">Planning</span>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-slate-400">
+<span>Progress</span>
+<span class="text-primary">10%</span>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary shadow-[0_0_10px_rgba(140,31,249,0.5)] w-[10%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-2">
+<div class="flex -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-[#1e1b4b]" data-alt="Professional headshot of a team member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9w53NutFXRvLsQYQfcW8MWWwtb-Mu7bBNsXgkMzJY4lyK2SEW_ed0PvG20PfpNek_XdyAR-EIgNP2f5H6u0BkaVUE5THNcUfr6bl5hJQpMP_Jk9WaatoAXFyIpyF48rnHL2xST99EQSWYe14gYYB99ekc1ejM3U4gQVw2UnIm1Z-SKwIMt2fQtmgFQso3PbfcUg8q9fb0bf-l9McGQESPAJJrfPxGGOmPxK_x6Tb2Dehj5yJR5ydAaEFPrnzP24jKPDGd3_uDoHA"/>
+</div>
+<p class="text-xs text-slate-500 font-medium">Due in 24 days</p>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-28 w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white shadow-[0_0_20px_rgba(140,31,249,0.6)] hover:scale-105 transition-transform z-30">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Glassmorphic Bottom Navbar -->
+<div class="fixed bottom-6 left-6 right-6 z-40">
+<div class="glass-dark rounded-full px-4 py-3 flex items-center justify-between shadow-2xl">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">folder</span>
+<span class="text-[10px] font-semibold">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">group</span>
+<span class="text-[10px] font-semibold">Clients</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">track_changes</span>
+<span class="text-[10px] font-semibold">Leads</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">more_horiz</span>
+<span class="text-[10px] font-semibold">More</span>
+</a>
+</div>
+</div>
+</body></html>

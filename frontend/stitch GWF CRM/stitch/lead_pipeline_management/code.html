@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lead Pipeline Management - GWF CRM</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling areas */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased selection:bg-primary/30">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header -->
+<div class="sticky top-0 z-20 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Lead Pipeline</h2>
+<div class="flex size-12 items-center justify-end">
+<span class="material-symbols-outlined text-[24px] text-slate-500 dark:text-slate-400">search</span>
+</div>
+</div>
+<!-- KPI / Stats Summary -->
+<div class="grid grid-cols-2 gap-3 px-4 pt-4">
+<div class="flex flex-col rounded-xl bg-white dark:bg-[#1c2230] p-3 shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total Value</p>
+<div class="mt-1 flex items-end gap-2">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">$425k</span>
+<span class="mb-1 text-xs font-medium text-green-500 flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-0.5">trending_up</span>
+                        12%
+                    </span>
+</div>
+</div>
+<div class="flex flex-col rounded-xl bg-white dark:bg-[#1c2230] p-3 shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">Avg Score</p>
+<div class="mt-1 flex items-end gap-2">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100">8.4</span>
+<span class="mb-1 text-xs font-medium text-primary flex items-center">
+                        Top 10%
+                    </span>
+</div>
+</div>
+</div>
+<!-- Stage Filter Tabs -->
+<div class="flex gap-3 px-4 py-4 overflow-x-auto hide-scrollbar sticky top-[60px] z-10 bg-background-light dark:bg-background-dark">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-5 pr-5 shadow-lg shadow-primary/25 transition-all">
+<p class="text-white text-sm font-bold leading-normal">New Leads</p>
+<span class="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold text-white">5</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-[#282e39] pl-5 pr-5 transition-all hover:bg-slate-300 dark:hover:bg-[#343b47]">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Contacted</p>
+<span class="flex h-5 w-5 items-center justify-center rounded-full bg-slate-400/20 dark:bg-white/10 text-[10px] font-bold text-slate-600 dark:text-slate-400">12</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-[#282e39] pl-5 pr-5 transition-all hover:bg-slate-300 dark:hover:bg-[#343b47]">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Qualified</p>
+<span class="flex h-5 w-5 items-center justify-center rounded-full bg-slate-400/20 dark:bg-white/10 text-[10px] font-bold text-slate-600 dark:text-slate-400">8</span>
+</button>
+</div>
+<!-- Lead List -->
+<div class="flex flex-col gap-4 px-4 pb-4">
+<!-- Lead Card 1 -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1c2230] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="relative size-12 shrink-0 rounded-full bg-slate-200 dark:bg-slate-700">
+<img alt="Portrait of Sarah Jenkins" class="h-full w-full rounded-full object-cover" data-alt="Portrait of a smiling professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtGP4ZY8yk9S6ibP_gQ6CyO3Mm1_aWJQ94WDtPPtW6LDiHd0vRZjz-BY6r8F31-cGZgQwq-IF_wfoqlF-kTxf0My0dPrLLPrhLfPz1bYJ2cTT6NiF6IcArBVBFD4gabk2IarFpFPiJoQAh1F_SQNl0OnFraKI0kqQrn-F672wAyc7OUgHnyijseDMgxaAO57MVOuWlmwJ-_5SdJspeTHLitOY2D3albECfAIQDeQVB0OhP2ODqzL9rGiHGyepmGPvPfg-Op-aY79kR"/>
+<div class="absolute -bottom-1 -right-1 flex size-5 items-center justify-center rounded-full bg-primary text-white border-2 border-white dark:border-[#1c2230]">
+<span class="material-symbols-outlined text-[12px]">star</span>
+</div>
+</div>
+<div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-tight">Sarah Jenkins</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">TechFlow Solutions</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-bold text-green-600 dark:text-green-400 ring-1 ring-inset ring-green-500/20">Score: 9.2</span>
+<span class="text-[10px] text-slate-400">2h ago</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700/50 mt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-2 text-sm font-semibold text-white hover:bg-primary/90">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                        Call
+                    </button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Lead Card 2 -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1c2230] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="relative size-12 shrink-0 rounded-full bg-slate-200 dark:bg-slate-700">
+<img alt="Portrait of Michael Chen" class="h-full w-full rounded-full object-cover" data-alt="Portrait of a smiling professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtt7obx2uvmbOBjBuTAKd4CXLTKJD9HM71MqFEcZLQxn07yZp8FvoC9bSObVijtG6wofcmLIwkXi6I0sdEsOfNBw1p4Fi68g8EW3ogdO-oRo4K_y8LrIpV9W7gcuTVAdbhM7rdagrFZTtkpZe5-y7RSaX8GQcHiz7_qm1h85Y7XjXXtO8ErPwxWJxYFGWLAtrNUe_XWvFo7ZBcmzWEhPpv86C5yHfsgCW6a-24ByVsnUmVkDdYxfX6Eus_DMGy4tPsUnMJT348QsIA"/>
+</div>
+<div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-tight">Michael Chen</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Apex Innovations</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-md bg-yellow-500/10 px-2 py-1 text-xs font-bold text-yellow-600 dark:text-yellow-400 ring-1 ring-inset ring-yellow-500/20">Score: 7.5</span>
+<span class="text-[10px] text-slate-400">5h ago</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700/50 mt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-2 text-sm font-semibold text-white hover:bg-primary/90">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                        Call
+                    </button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Lead Card 3 - Urgent -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1c2230] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800">
+<div class="absolute right-0 top-0 h-full w-1 rounded-r-xl bg-red-500"></div>
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="relative size-12 shrink-0 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-300 text-sm font-bold border border-slate-100 dark:border-slate-600">
+                            ED
+                        </div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-tight">Emily Davis</h3>
+<span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+</div>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Creative Hub</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-bold text-green-600 dark:text-green-400 ring-1 ring-inset ring-green-500/20">Score: 8.8</span>
+<span class="text-[10px] text-red-400 font-medium">Follow up today</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700/50 mt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                        Meeting
+                    </button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary hover:bg-primary/20">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</button>
+<button class="flex size-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Lead Card 4 -->
+<div class="group relative flex flex-col gap-3 rounded-xl bg-white dark:bg-[#1c2230] p-4 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-none border border-slate-100 dark:border-slate-800 opacity-60">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="relative size-12 shrink-0 rounded-full bg-slate-200 dark:bg-slate-700">
+<img alt="Portrait of James Wilson" class="h-full w-full rounded-full object-cover" data-alt="Portrait of a man in suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC51SqR3HweHNpXexu3KebcqXNwkyPTvf7qG6_q4D4A1QpEmy3HUJ1QO48ajs7zoPR2Cfpclk_wheW5Dg6_b0G6WA3xQIXQkADc8LQHHAo1SW9i_V4AZUy8P8QCcO2Tl4SvlDqCAnWLwncxlzrGrPJFLhPlEiRU21T3o7tfbBrNxH_3ul8jfW_p6eQe3F8V2Ko5zzEgixnSsTBJufLWM5MzRQAvNeueNop5f7XvykDvuESLHTNw-xlMH1c8d8sjBjkvOU9RYfvBde3l"/>
+</div>
+<div>
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 leading-tight">James Wilson</h3>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Global Logistics</p>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="inline-flex items-center rounded-md bg-red-500/10 px-2 py-1 text-xs font-bold text-red-600 dark:text-red-400 ring-1 ring-inset ring-red-500/20">Score: 3.2</span>
+<span class="text-[10px] text-slate-400">1d ago</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700/50 mt-1">
+<button class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-slate-100 dark:bg-slate-800 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                        View Details
+                    </button>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-4 z-30 flex size-14 items-center justify-center rounded-full bg-primary text-white shadow-xl shadow-primary/40 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 z-40 w-full border-t border-slate-200 dark:border-[#282e39] bg-background-light dark:bg-[#1c1f27] px-4 pb-6 pt-2">
+<div class="flex justify-between items-center">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined text-[24px] fill-current">filter_alt</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Pipeline</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">work</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Finance</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="#">
+<div class="flex h-6 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">More</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

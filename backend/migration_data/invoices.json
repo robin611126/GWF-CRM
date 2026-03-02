@@ -1,0 +1,50 @@
+[
+  {
+    "id": "60895c1a-5345-4f61-8729-1ef60ecb9d83",
+    "invoice_number": "INV-0001",
+    "client_id": "f2fdae70-7798-459c-9ea4-fc497645d3e7",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "issued_date": 1772345171029,
+    "due_date": 1772668800000,
+    "total_amount": 5000,
+    "tax_rate": 0,
+    "tax_amount": 0,
+    "amount_paid": 5000,
+    "status": "PAID",
+    "notes": "",
+    "created_at": 1772345171029,
+    "updated_at": 1772355966581
+  },
+  {
+    "id": "b1330e8e-e794-4f00-9baa-24becbd9fedb",
+    "invoice_number": "INV-0002",
+    "client_id": "9c197b67-c631-4193-9926-34b803f643c4",
+    "project_id": null,
+    "issued_date": 1772349257465,
+    "due_date": 1772236800000,
+    "total_amount": 3000,
+    "tax_rate": 0,
+    "tax_amount": 0,
+    "amount_paid": 1500,
+    "status": "PARTIAL",
+    "notes": "",
+    "created_at": 1772349257465,
+    "updated_at": 1772356925629
+  },
+  {
+    "id": "7a9848ee-ba5a-4743-8221-3e3a00a006b5",
+    "invoice_number": "INV-0003",
+    "client_id": "f2fdae70-7798-459c-9ea4-fc497645d3e7",
+    "project_id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "issued_date": 1772349356514,
+    "due_date": 1771977600000,
+    "total_amount": 5000,
+    "tax_rate": 0,
+    "tax_amount": 0,
+    "amount_paid": 2500,
+    "status": "PARTIAL",
+    "notes": "",
+    "created_at": 1772349356514,
+    "updated_at": 1772356925629
+  }
+]

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Tasks and Milestones - GWF CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1c2333", // Slightly lighter than background-dark for cards
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3748;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5568;
+        }
+        
+        /* Checkbox custom style override */
+        .custom-checkbox:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100 flex justify-center">
+<div class="relative flex h-screen w-full max-w-md flex-col overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Header -->
+<div class="flex items-center px-4 pt-12 pb-4 justify-between bg-surface-dark/50 backdrop-blur-md sticky top-0 z-20 border-b border-white/5">
+<button class="text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Project Details</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 text-slate-100 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto overflow-x-hidden pb-24">
+<!-- Project Header Info -->
+<div class="px-4 py-6">
+<div class="flex items-start justify-between">
+<div>
+<span class="inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20 mb-2">Active</span>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-1">Redesign Website</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400">TechFlow Systems • Due Oct 24, 2023</p>
+</div>
+<div class="flex -space-x-2 overflow-hidden">
+<img alt="Team member 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-background-dark object-cover" data-alt="Portrait of a man with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm6fYkuN9qFZ6wRslMyXwxmFLqVTmscTahZDFIhjWCJHufCbnV4Jw9D44trmzj_Zi5xWwfXQNLbUikX6v_i4b0wBxPnvvqUbrKjdZjpSNnvfPZamuKDNwYk_7LatsXejG2Q34ye5WO2lSOKfYtYxYeoYqe6D39vskw1WuPXq1cvZSPPdwRyU6JFobhwEjGxIGsRFeNWVHg5tcbT1xFwZnM-GbDl1gVEAKdtys8DrqqE4RRC61gAKJkrnYnB6qpnBCrSwjAWJMQ9NPD"/>
+<img alt="Team member 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-background-dark object-cover" data-alt="Portrait of a smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh_iIq5Ju8r8RDXKW5sk5bvn25onGVKh92fUU9yRkq5zQP-81zbYlL0npsVEfyw5N4v0TmC5xnB0TlmUpYNGc7rxcKMPxknN3LAMGXofqSsfZ_ZwjpTddAYwvsy508YARvAOavx-bDYAdCFlGNjLgVhbpniDTim1zzqhocN5oKyKnk0WNKSJiamQ6_Qckt11XozcnE8gFSHlrJE5VkdnPvMQM9NvWxScSL-Se5WcUezZbDePsvNvzL4I81vtWyoYE01evo4UrhfUlY"/>
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-surface-dark ring-2 ring-background-dark text-xs font-medium text-slate-400">+3</div>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="mt-6">
+<div class="flex justify-between text-sm mb-2">
+<span class="text-slate-400">Progress</span>
+<span class="text-primary font-bold">65%</span>
+</div>
+<div class="h-2 w-full bg-surface-dark rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+</div>
+</div>
+</div>
+<!-- Segment Control -->
+<div class="px-4 pb-6 sticky top-[80px] z-10 bg-background-light dark:bg-background-dark pt-2">
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-surface-dark p-1 border border-white/5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-[#2d3648] has-[:checked]:shadow-sm has-[:checked]:text-white text-slate-400 text-sm font-bold transition-all duration-200">
+<span class="truncate">Tasks</span>
+<input checked="" class="invisible w-0 absolute" name="view-toggle" type="radio" value="Tasks"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-[#2d3648] has-[:checked]:shadow-sm has-[:checked]:text-white text-slate-400 text-sm font-bold transition-all duration-200">
+<span class="truncate">Files</span>
+<input class="invisible w-0 absolute" name="view-toggle" type="radio" value="Files"/>
+</label>
+</div>
+</div>
+<!-- Milestones Section -->
+<div class="mb-2">
+<div class="flex items-center justify-between px-4 pb-3">
+<h2 class="text-white text-lg font-bold leading-tight">Milestones</h2>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">2/3 Done</span>
+</div>
+<div class="px-4 space-y-3">
+<label class="group flex items-start gap-x-3 p-4 rounded-xl bg-surface-dark border border-white/5 transition-all hover:border-primary/30">
+<div class="relative flex items-start">
+<input checked="" class="peer h-5 w-5 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-transparent text-primary transition-all checked:border-primary checked:bg-primary focus:ring-0 focus:ring-offset-0 custom-checkbox mt-0.5" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-300 text-sm font-medium leading-normal peer-checked:text-slate-500 peer-checked:line-through transition-colors">Initial Requirements Gathering</p>
+<span class="text-xs text-slate-500 mt-1">Completed on Oct 10</span>
+</div>
+</label>
+<label class="group flex items-start gap-x-3 p-4 rounded-xl bg-surface-dark border border-white/5 transition-all hover:border-primary/30">
+<div class="relative flex items-start">
+<input checked="" class="peer h-5 w-5 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-transparent text-primary transition-all checked:border-primary checked:bg-primary focus:ring-0 focus:ring-offset-0 custom-checkbox mt-0.5" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-300 text-sm font-medium leading-normal peer-checked:text-slate-500 peer-checked:line-through transition-colors">Design Mockups Approval</p>
+<span class="text-xs text-slate-500 mt-1">Completed on Oct 15</span>
+</div>
+</label>
+<label class="group flex items-start gap-x-3 p-4 rounded-xl bg-surface-dark border border-white/5 transition-all hover:border-primary/30">
+<div class="relative flex items-start">
+<input class="peer h-5 w-5 cursor-pointer appearance-none rounded border-2 border-slate-500 bg-transparent text-primary transition-all checked:border-primary checked:bg-primary focus:ring-0 focus:ring-offset-0 custom-checkbox mt-0.5" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-medium leading-normal group-hover:text-primary transition-colors">Development Sprint 1</p>
+<span class="text-xs text-orange-400 mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                Due in 2 days
+                            </span>
+</div>
+</label>
+</div>
+</div>
+<div class="h-px bg-white/5 my-6 mx-4"></div>
+<!-- Detailed Task List -->
+<div class="px-4">
+<div class="flex items-center justify-between pb-4">
+<h2 class="text-white text-lg font-bold leading-tight">Tasks</h2>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:text-primary/80">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        New Task
+                    </button>
+</div>
+<div class="space-y-4">
+<!-- Task Item High Priority -->
+<div class="flex flex-col gap-3 rounded-xl bg-surface-dark p-4 border-l-4 border-red-500 shadow-lg shadow-black/20">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/10 text-red-500 uppercase tracking-wider">High</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/10 text-blue-400 uppercase tracking-wider">In Progress</span>
+</div>
+<button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-[20px]">more_horiz</span></button>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-medium text-sm">Integrate Payment Gateway</h3>
+<p class="text-slate-400 text-xs mt-1 line-clamp-2">Setup Stripe API keys and create webhook endpoints for recurring billing.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-white/5 mt-1">
+<div class="flex items-center gap-3">
+<img alt="Assignee" class="w-6 h-6 rounded-full ring-1 ring-background-dark" data-alt="Portrait of a focused man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyVZBkE2JvO6BWZ-mEVwwkGnWpL1vXu6jeNVijiRBwGSLIBxMJ6-MW5dgKiAXqn3EaCPvawUIiYl7oEhvpb0GQ4gBpzLzG2U0bzazsJBD6t7qxCsoyIdfuurig1DGyXE9UT3S6hihWE3DIa2RrdjG_k4GHLdDLXhoWjqKJtLvG41nOgmpEFOFsfpteQlyKbWsxKoI5Dsi7HtUSZ6F9Ogp8zD_iOiPs3crRtFo5DxvDWdb7libscbS7TqU57Ni5xTkTvyS0YcvU54UA"/>
+<span class="text-xs text-slate-500 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">attach_file</span> 2
+                                </span>
+</div>
+<span class="text-xs text-slate-500 font-mono">GWF-1024</span>
+</div>
+</div>
+<!-- Task Item Medium Priority with Dependency -->
+<div class="flex flex-col gap-3 rounded-xl bg-surface-dark p-4 border-l-4 border-orange-400 shadow-lg shadow-black/20 opacity-75">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-400/10 text-orange-400 uppercase tracking-wider">Medium</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700/50 text-slate-400 uppercase tracking-wider">Blocked</span>
+</div>
+<button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-[20px]">more_horiz</span></button>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate-600 text-[20px]">lock</span>
+</div>
+<div>
+<h3 class="text-slate-300 font-medium text-sm">Frontend Checkout Flow</h3>
+<p class="text-slate-500 text-xs mt-1">Design and implement the multi-step checkout wizard component.</p>
+<div class="mt-2 flex items-center gap-1.5 p-1.5 rounded bg-red-500/10 border border-red-500/20 w-fit">
+<span class="material-symbols-outlined text-red-400 text-[14px]">link</span>
+<span class="text-[10px] text-red-300 font-medium">Waiting on: Integrate Payment Gateway</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-white/5 mt-1">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-[10px] text-slate-300 font-bold ring-1 ring-background-dark">UN</div>
+</div>
+<span class="text-xs text-slate-500 font-mono">GWF-1025</span>
+</div>
+</div>
+<!-- Task Item Low Priority -->
+<div class="flex flex-col gap-3 rounded-xl bg-surface-dark p-4 border-l-4 border-green-400 shadow-lg shadow-black/20">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-400/10 text-green-400 uppercase tracking-wider">Low</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/10 text-purple-400 uppercase tracking-wider">Review</span>
+</div>
+<button class="text-slate-500 hover:text-white"><span class="material-symbols-outlined text-[20px]">more_horiz</span></button>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-1">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-medium text-sm">Update Documentation</h3>
+<p class="text-slate-400 text-xs mt-1">Add API references to the internal wiki.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-white/5 mt-1">
+<div class="flex items-center gap-3">
+<img alt="Assignee" class="w-6 h-6 rounded-full ring-1 ring-background-dark" data-alt="Portrait of a man in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYL6ilCEiQMGRYGpaujKJkukCQEmA9cWtxhklcecKz9RSVfy51y7E05b8_0Z7b8_RsyD_lXR71DjgqHqXWcr07wqEw4KMgXw28qIIW-M6bP-9dWRmB-ysIDoJvg6eUeYwIf3dIo8tLgCT6umdDbKtLAVufR82b3L7mVteTKkDPeD9lB_CE2_77U4tbMzenfwWOP86GrGwmbuSa7uIyL-Bji4YGuaJAyLdGMjWGOE26eQ9aBo8vN1IwKLkXqpvmq2bDsj_ByJxJiICL"/>
+</div>
+<span class="text-xs text-slate-500 font-mono">GWF-1030</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-10"></div> <!-- Spacing for bottom nav -->
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-2 border-t border-white/5 bg-surface-dark px-4 pb-6 pt-3 z-30 absolute bottom-0 w-full">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-white transition-colors group" href="#">
+<div class="group-hover:text-white text-slate-400 flex h-6 items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[24px]">speed</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="text-primary flex h-6 items-center justify-center">
+<span class="material-symbols-outlined text-[24px] fill-current">folder</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-white transition-colors group" href="#">
+<div class="group-hover:text-white text-slate-400 flex h-6 items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Clients</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-white transition-colors group" href="#">
+<div class="group-hover:text-white text-slate-400 flex h-6 items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[24px]">attach_money</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-[0.015em]">Finance</p>
+</a>
+</div>
+</div>
+</body></html>

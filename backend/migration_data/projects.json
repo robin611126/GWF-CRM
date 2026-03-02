@@ -1,0 +1,110 @@
+[
+  {
+    "id": "bfb6fe91-8fc1-43fd-8d34-31e77b8ce523",
+    "client_id": "815ac6fd-3e34-4e8a-9d06-8809c6311bf5",
+    "title": "new test project - edited",
+    "description": "hhfkuglhlkUpdated description for testing.",
+    "start_date": null,
+    "end_date": null,
+    "status": "PLANNING",
+    "budget": 12345,
+    "created_at": 1772282803884,
+    "updated_at": 1772285472417
+  },
+  {
+    "id": "a388ab9a-1115-423e-9a41-556b2588f924",
+    "client_id": "683d8697-6b52-4428-b556-56985d1cb7b3",
+    "title": "baba",
+    "description": "njdnd",
+    "start_date": null,
+    "end_date": 1772668800000,
+    "status": "PLANNING",
+    "budget": 9999,
+    "created_at": 1772343306801,
+    "updated_at": 1772344015737
+  },
+  {
+    "id": "170a6bea-efb9-48ba-af58-573b3ffd33ea",
+    "client_id": "f2fdae70-7798-459c-9ea4-fc497645d3e7",
+    "title": "the earth - Initial Project",
+    "description": "Auto-created project from lead conversion",
+    "start_date": null,
+    "end_date": 1772668800000,
+    "status": "PLANNING",
+    "budget": 9999,
+    "created_at": 1772344149052,
+    "updated_at": 1772355278339
+  },
+  {
+    "id": "7e6bdf5d-8954-4f19-95e0-85ee8889a313",
+    "client_id": "7249ca4b-3761-4a20-b9df-3e8f7293eaf5",
+    "title": "Nickolsian  - Initial Project",
+    "description": "Auto-created project from lead conversion",
+    "start_date": null,
+    "end_date": null,
+    "status": "PLANNING",
+    "budget": null,
+    "created_at": 1772344457303,
+    "updated_at": 1772344457303
+  },
+  {
+    "id": "2e5b35f4-90e3-4972-bebd-400658c276fd",
+    "client_id": "7249ca4b-3761-4a20-b9df-3e8f7293eaf5",
+    "title": "jhvuh",
+    "description": "yguigiu",
+    "start_date": null,
+    "end_date": 1777939200000,
+    "status": "PLANNING",
+    "budget": 48484,
+    "created_at": 1772344499850,
+    "updated_at": 1772344499850
+  },
+  {
+    "id": "5d28b40d-4a15-4a72-a609-e66430520fc0",
+    "client_id": "ac8e216d-4e2d-41d6-8ddf-80566aa4c0c2",
+    "title": "bbuhih",
+    "description": "huih",
+    "start_date": null,
+    "end_date": 1772668800000,
+    "status": "PLANNING",
+    "budget": 8551,
+    "created_at": 1772344886888,
+    "updated_at": 1772344886888
+  },
+  {
+    "id": "a5c4d817-0f74-4f80-b89f-637af0ac4ac0",
+    "client_id": "1324d0ce-8059-4439-9e75-7ac0fd7f41a3",
+    "title": "Nickolsian  - Initial Project",
+    "description": "Auto-created project from lead conversion",
+    "start_date": null,
+    "end_date": null,
+    "status": "PLANNING",
+    "budget": null,
+    "created_at": 1772344910277,
+    "updated_at": 1772344910277
+  },
+  {
+    "id": "771e1f02-c3aa-4ee7-a3f4-0735f2a51c70",
+    "client_id": "9c197b67-c631-4193-9926-34b803f643c4",
+    "title": "Nickolsian  - Initial Project",
+    "description": "Auto-created project from lead conversion",
+    "start_date": null,
+    "end_date": null,
+    "status": "PLANNING",
+    "budget": null,
+    "created_at": 1772345016602,
+    "updated_at": 1772368194259
+  },
+  {
+    "id": "cbeecd62-5a3a-45af-8ad4-227ff6281676",
+    "client_id": "3572d33f-cb2a-4bb0-8c33-01ea0e6ef60b",
+    "title": "rakesh - Initial Project",
+    "description": "Auto-created project from lead conversion",
+    "start_date": null,
+    "end_date": null,
+    "status": "PLANNING",
+    "budget": null,
+    "created_at": 1772371958980,
+    "updated_at": 1772371958980
+  }
+]

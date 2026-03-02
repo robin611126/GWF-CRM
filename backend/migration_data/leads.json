@@ -1,0 +1,47 @@
+[
+  {
+    "id": "489992c8-89eb-4994-8748-1b7c0acf94a5",
+    "name": "faishal",
+    "email": "faishal_unique@example.com",
+    "phone": "2546841265",
+    "company": "the earth",
+    "source": "ADS",
+    "stage": "WON",
+    "score": 50,
+    "assigned_user_id": null,
+    "notes": "bla bla",
+    "lost_reason": null,
+    "created_at": 1772273281102,
+    "updated_at": 1772345070246
+  },
+  {
+    "id": "7a551863-c733-4879-b0e7-772ed46f3897",
+    "name": "Kalli kaliya ",
+    "email": null,
+    "phone": "9746284638",
+    "company": "Nickolsian ",
+    "source": "ADS",
+    "stage": "WON",
+    "score": 50,
+    "assigned_user_id": null,
+    "notes": "Hdhd",
+    "lost_reason": null,
+    "created_at": 1772286684657,
+    "updated_at": 1772345016597
+  },
+  {
+    "id": "47a12aee-daac-4bf4-83d4-80c0b905faa7",
+    "name": "rakesh",
+    "email": null,
+    "phone": "9631313924",
+    "company": null,
+    "source": "MANUAL",
+    "stage": "WON",
+    "score": 25,
+    "assigned_user_id": null,
+    "notes": "travel agency owner",
+    "lost_reason": null,
+    "created_at": 1772371949339,
+    "updated_at": 1772371958969
+  }
+]

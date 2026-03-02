@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cdb163a4-0fda-4806-9842-246e7665de45",
+    "code": "INR",
+    "symbol": "₹",
+    "name": "Indian Rupee",
+    "is_default": 1,
+    "created_at": 1772268755033,
+    "updated_at": 1772268755033
+  },
+  {
+    "id": "3d662f9b-73c4-483c-a632-4d7f1ed3e90b",
+    "code": "USD",
+    "symbol": "$",
+    "name": "US Dollar",
+    "is_default": 0,
+    "created_at": 1772268755038,
+    "updated_at": 1772268755038
+  }
+]

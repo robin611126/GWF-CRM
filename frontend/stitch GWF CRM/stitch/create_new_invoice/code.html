@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create New Invoice - GWF CRM</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for mobile-like feel if needed, though hidden by default in design */
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100 font-display selection:bg-primary/30">
+<div class="relative flex h-full w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden min-h-screen pb-24 shadow-2xl">
+<!-- Header -->
+<div class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 p-4 flex items-center justify-between">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Create New Invoice</h2>
+</div>
+<!-- Main Form Content -->
+<div class="flex flex-col gap-6 p-4">
+<!-- Client & Plan Section -->
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full group">
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2 ml-1">Select Client</span>
+<div class="relative">
+<select class="appearance-none w-full bg-white dark:bg-[#1c1f27] border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-base rounded-xl px-4 py-3.5 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+<option disabled="" selected="" value="">Search for a client...</option>
+<option value="1">Acme Corp</option>
+<option value="2">Stark Industries</option>
+<option value="3">Wayne Enterprises</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</label>
+<label class="flex flex-col w-full group">
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-400 mb-2 ml-1">Service Plan</span>
+<div class="relative">
+<select class="appearance-none w-full bg-white dark:bg-[#1c1f27] border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-base rounded-xl px-4 py-3.5 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+<option disabled="" selected="" value="">Select a plan...</option>
+<option value="silver">Silver Tier - Monthly</option>
+<option value="gold">Gold Tier - Monthly</option>
+<option value="platinum">Platinum Tier - Annual</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</label>
+</div>
+<!-- Line Items Section -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Line Items</h3>
+<button class="text-primary text-sm font-semibold hover:text-primary/80 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">add</span> Add Item
+                    </button>
+</div>
+<!-- Item 1 -->
+<div class="bg-white dark:bg-[#1c1f27] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3 relative overflow-hidden group">
+<div class="size-12 shrink-0 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">web</span>
+</div>
+<div class="flex-1 min-w-0 pr-8">
+<h4 class="font-semibold text-slate-900 dark:text-white truncate">Web Design Service</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Custom Landing Page</p>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-sm font-medium text-slate-900 dark:text-slate-200">$1,200.00</span>
+<span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Qty: 1</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 p-1 text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-[#1c1f27] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3 relative overflow-hidden group">
+<div class="size-12 shrink-0 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<div class="flex-1 min-w-0 pr-8">
+<h4 class="font-semibold text-slate-900 dark:text-white truncate">Hosting Setup</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Annual server config</p>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-sm font-medium text-slate-900 dark:text-slate-200">$150.00</span>
+<span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Qty: 1</span>
+</div>
+</div>
+<button class="absolute top-3 right-3 p-1 text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Settings Toggles -->
+<div class="bg-white dark:bg-[#1c1f27] rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Tax Toggle -->
+<div class="p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-base font-medium text-slate-900 dark:text-white">Taxable</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Apply standard tax rate (8%)</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/80 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Discount Input -->
+<div class="p-4 flex flex-col gap-2">
+<span class="text-base font-medium text-slate-900 dark:text-white">Discount Code</span>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-50 dark:bg-slate-800 border-none rounded-lg px-3 py-2 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-1 focus:ring-primary uppercase" placeholder="ENTER CODE" type="text"/>
+<button class="px-4 py-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-semibold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Apply</button>
+</div>
+</div>
+</div>
+<!-- Financial Summary -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/10 dark:border-primary/20 flex flex-col gap-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400">Subtotal</span>
+<span class="font-medium text-slate-900 dark:text-slate-200">$1,350.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-600 dark:text-slate-400">Tax (8%)</span>
+<span class="font-medium text-slate-900 dark:text-slate-200">$108.00</span>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-700 my-1"></div>
+<div class="flex justify-between items-center text-lg">
+<span class="font-bold text-slate-900 dark:text-white">Total</span>
+<span class="font-bold text-primary">$1,458.00</span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Actions -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-t border-slate-200 dark:border-slate-800 z-20 flex gap-3">
+<button class="flex-1 py-3.5 px-4 rounded-xl border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-bold text-base hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                Save Draft
+            </button>
+<button class="flex-1 py-3.5 px-4 rounded-xl bg-primary text-white font-bold text-base hover:bg-blue-600 shadow-lg shadow-primary/25 transition-colors flex items-center justify-center gap-2">
+<span>Send Invoice</span>
+<span class="material-symbols-outlined text-sm font-bold">send</span>
+</button>
+</div>
+</div>
+</body></html>

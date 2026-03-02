@@ -1,0 +1,29 @@
+[
+  {
+    "id": "c3fe1b7c-9953-4431-a24f-79f1f871a4be",
+    "invoice_id": "60895c1a-5345-4f61-8729-1ef60ecb9d83",
+    "amount": 5000,
+    "date": 1772323200000,
+    "method": "UPI",
+    "notes": "he paid ",
+    "created_at": 1772349024160
+  },
+  {
+    "id": "bc639dab-32d4-4b5e-b0e1-cd40844c2198",
+    "invoice_id": "b1330e8e-e794-4f00-9baa-24becbd9fedb",
+    "amount": 1500,
+    "date": 1772323200000,
+    "method": "CARD",
+    "notes": "673435763",
+    "created_at": 1772349313930
+  },
+  {
+    "id": "6ee9705b-4dbf-4420-81f4-85bbd8511574",
+    "invoice_id": "7a9848ee-ba5a-4743-8221-3e3a00a006b5",
+    "amount": 2500,
+    "date": 1772323200000,
+    "method": "UPI",
+    "notes": "684643733543",
+    "created_at": 1772349396721
+  }
+]

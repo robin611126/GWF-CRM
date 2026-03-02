@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GWF CRM Clients List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0a0a1a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at top left, #1e1b4b, #0a0a1a);
+        }
+        .status-glow-active {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+        }
+        .status-glow-pending {
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .fab-shadow {
+            box-shadow: 0 8px 24px rgba(13, 89, 242, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center">
+<!-- Mobile Container -->
+<div class="relative w-full max-w-[430px] h-screen gradient-bg overflow-hidden flex flex-col shadow-2xl">
+<!-- Header -->
+<header class="pt-12 px-6 pb-4">
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-3xl font-bold tracking-tight text-white">Clients</h1>
+<div class="flex gap-3">
+<button class="glass size-10 rounded-full flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+</button>
+<div class="size-10 rounded-full border-2 border-primary/50 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYm67n0ynMgNvBtCxPc7VQ3M49jyC-1GH3l50NPH12LHMhyDfVmXiveS1tqAKORsGEIaUmUlbq2xnuzmQZ89Yrzb0mj__Zw29KY5WsBLlF8uPOpdWbTH33XVFh4384dptSMhaGsiPT9HQ3CoeeOfwD-br2Osasexb82iMZFhyfX3PwRUmf1SRwwaCrM6IIVW55WVKmvY-thung0hCmHUkZAgjlI5UvOyeH2QXAO8DOK474Var12g6ep0_90A20Tl7gMiClnb63ao4"/>
+</div>
+</div>
+</div>
+<!-- Search & Filter Bar -->
+<div class="flex gap-3">
+<div class="glass flex-1 rounded-xl flex items-center px-4 h-12">
+<span class="material-symbols-outlined text-slate-400 mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-white w-full placeholder:text-slate-500" placeholder="Search clients..." type="text"/>
+</div>
+<button class="glass size-12 rounded-xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</header>
+<!-- Quick Filters -->
+<div class="flex gap-2 px-6 py-2 overflow-x-auto no-scrollbar">
+<button class="bg-primary text-white px-5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap">All Clients</button>
+<button class="glass text-slate-300 px-5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap">Active</button>
+<button class="glass text-slate-300 px-5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap">Pending</button>
+<button class="glass text-slate-300 px-5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap">Archived</button>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-6 py-4 space-y-4 no-scrollbar pb-24">
+<!-- Client Card 1 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 relative">
+<div class="relative">
+<img class="size-14 rounded-full border border-white/10 object-cover" data-alt="Professional woman smiling in circular frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjDcoKKGCmIvfjag9ooS1V3gsbIvERaQGrrz4IzPpWtTLjsKnXejP7tK-IzvBCwvhmJrLmWcWoVd3GutJQdZ1mztWpvfDGFBp_dsF1tohnie3-AXf9ZXPvse1Mvtd9su5EhGF8ws8juiJ1IP8mbXEDDcl9tO_U9vVe_egXpAUoijmZKtu6v9_dy5XVlChsai7xwYLUhV9xuhmRockaHD0-apqx0oBVLjvsRug0SkMWFj8lCiqbLvCiQJtSM0jUYAaO-lXDwcb3BkU"/>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-[#0a0a1a]"></div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-base truncate">Alex Thompson</h3>
+<p class="text-slate-400 text-xs truncate">Global Solutions Inc.</p>
+<p class="text-primary text-[11px] font-medium mt-1">alex.t@globalsol.com</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="status-glow-active bg-green-500/20 text-green-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Active</span>
+<button class="text-slate-500"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</div>
+</div>
+<!-- Client Card 2 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 relative">
+<div class="relative">
+<img class="size-14 rounded-full border border-white/10 object-cover" data-alt="Professional man in suit headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPIU9D_eEXgwmev5vOnYLXIRdQ5yr_9bfcUmtchh5L5H4SWdDEHUVQAaHzR4vUNabR4eHrblObl_SUWiBz0hVH-Pw2Rk5Mbsph-pZj3rzVbwksfuaxbb6NJnNEbKgAreX81gJ7BjxY_NfaT3b-BRijFcMavLWU4h5UXTjc5etJZz6Ea2T6UeqOzv6h8UMSgtE7s1nhn1I3NNG0qGnscKPu6BDB-9j0jchyLWqUfcxrgMnSNevuLRBXsirrM70aUKuVYtga6-sUr-c"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-base truncate">Marcus Vane</h3>
+<p class="text-slate-400 text-xs truncate">Vanguard Creative</p>
+<p class="text-primary text-[11px] font-medium mt-1">+1 (555) 012-3456</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="status-glow-pending bg-amber-500/20 text-amber-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Pending</span>
+<button class="text-slate-500"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</div>
+</div>
+<!-- Client Card 3 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 relative">
+<div class="relative">
+<img class="size-14 rounded-full border border-white/10 object-cover" data-alt="Corporate businesswoman portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbOjOLqrLX93Um-x-B5COYSVPJPgUfL_ztjkhHXOchxFpVCSgCMAH0a56hjLOK2ESgQ4qR7z5lWa8ryAM-UWWNlO43C4Ltk4oTfrNljpy_D80r-P-Ik0Pm324GesZ3Zbqj2ei0HzUnvI-BpHRTn2HU0HgXWYryPwViOcADAzHddXy6bbCNc_-brHu1h_dAfvqIkD_e4LnDrwGjEBJ12WG-dGxFqf7wJyG7A2DaSbto6ugU3B_dOHP5mP2Z6sOlLBvlViyfO2JgHfc"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-base truncate">Sarah Jenkins</h3>
+<p class="text-slate-400 text-xs truncate">Summit Logistics</p>
+<p class="text-primary text-[11px] font-medium mt-1">s.jenkins@summit.io</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="status-glow-active bg-green-500/20 text-green-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Active</span>
+<button class="text-slate-500"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</div>
+</div>
+<!-- Client Card 4 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 relative">
+<div class="relative">
+<img class="size-14 rounded-full border border-white/10 object-cover" data-alt="Young entrepreneur smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvuQIifrkda3u5uJKfywvkNx2Q2zzg_QfSkFAwtPuWWnPnYXIaDDifIVI5DA_W6TLiQEqqRQ2LYfyL53Pthlbj7NSu0yveDwe82llcqHG0re7N8o8eRE2ciL5MChDqTRw86FNrdnw8AN5NVJSILsfljNoHtZuOvRaiGUCzQpjkgiHP3QArbW8EmXqNLw4yAW87P-JS0uv98q7C6lMV34EZjYp0ASXxoMtFT7PGKYV0tfeEpVV-v_-Iael1tBMsH4MItme3gFaywv0"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-base truncate">David Chen</h3>
+<p class="text-slate-400 text-xs truncate">TechFlow Systems</p>
+<p class="text-primary text-[11px] font-medium mt-1">d.chen@techflow.net</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="status-glow-active bg-green-500/20 text-green-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Active</span>
+<button class="text-slate-500"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</div>
+</div>
+<!-- Client Card 5 -->
+<div class="glass p-4 rounded-xl flex items-center gap-4 relative opacity-80">
+<div class="relative">
+<img class="size-14 rounded-full border border-white/10 object-cover grayscale" data-alt="Creative studio owner portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dKh0f7nH9PQDuMbfvhsJBRpc50PnvmPUc0k9j-4npDDawKcomyydvBLiLGwWQZ8eqg8oSo9lalfoZm-pgtnZIns7tDkdQICm0RJrFhw3y39MpKob1JQ73vRdoHqKbWjd_t8zmxZkVdaG9bD5L2bHnHJ24Y3Swyd_uGTZ6m01bCWq2xyCt4BYl0kxuGGZJlcl1Sx4D-BgpyzICjlxMExsLozUPW-z1w2gM9tkmNSR-6Wy7bAq4nfmomPx4axIK4wMT7glDDSHJkc"/>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-white font-semibold text-base truncate">Elena Rossi</h3>
+<p class="text-slate-400 text-xs truncate">Design Lab Italia</p>
+<p class="text-primary text-[11px] font-medium mt-1">elena@designlab.it</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-slate-500/20 text-slate-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Inactive</span>
+<button class="text-slate-500"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="absolute bottom-28 right-6 bg-primary text-white size-14 rounded-full fab-shadow flex items-center justify-center z-20">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar (Glassmorphic) -->
+<nav class="absolute bottom-6 left-6 right-6 glass rounded-full h-16 px-2 flex items-center justify-between z-30">
+<a class="flex flex-col items-center justify-center flex-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium mt-0.5">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium mt-0.5">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">group</span>
+<span class="text-[10px] font-bold mt-0.5">Clients</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="text-[10px] font-medium mt-0.5">Leads</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- Notch Overlay (iOS Style) -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-[#0a0a1a] rounded-b-3xl"></div>
+</div>
+</body></html>

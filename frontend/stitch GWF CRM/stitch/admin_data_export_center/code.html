@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Data Export Center - GWF CRM</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display antialiased overflow-x-hidden">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden bg-background-light dark:bg-background-dark">
+<!-- Header -->
+<div class="flex items-center justify-between p-4 pb-2 pt-6 sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Data Export Center</h1>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Hero Section -->
+<div class="px-4 py-6">
+<h2 class="text-3xl font-extrabold leading-tight mb-2">Export Data</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">
+                    Download your agency data in CSV format. Select individual entities or export everything at once.
+                </p>
+</div>
+<!-- Global Export Card -->
+<div class="px-4 mb-6">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-blue-700 shadow-lg p-5">
+<!-- Decorative background pattern -->
+<div class="absolute top-0 right-0 -mt-4 -mr-4 h-32 w-32 rounded-full bg-white opacity-10 blur-2xl"></div>
+<div class="absolute bottom-0 left-0 -mb-4 -ml-4 h-24 w-24 rounded-full bg-white opacity-10 blur-xl"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold leading-tight">Global Export</p>
+<p class="text-blue-100 text-xs font-normal leading-normal opacity-90">Download complete agency database backup</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white backdrop-blur-sm">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="text-xs text-blue-100 font-mono bg-black/20 px-2 py-1 rounded">Last: Oct 24, 09:41 AM</span>
+<button class="flex items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-bold text-primary shadow-sm hover:bg-blue-50 transition-colors">
+<span class="material-symbols-outlined text-[18px] mr-2">download</span>
+                                Export All
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Entity List Header -->
+<div class="px-4 pb-2 flex items-center justify-between">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100">Exportable Entities</h3>
+<button class="text-xs font-medium text-primary hover:text-blue-400 transition-colors">Select Multiple</button>
+</div>
+<!-- Entities List -->
+<div class="flex flex-col gap-1 px-4">
+<!-- Users -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Users</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">1,234 records • 2.4 MB</p>
+</div>
+</div>
+<button aria-label="Download Users CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Leads -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Leads</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">8,502 records • 14.2 MB</p>
+</div>
+</div>
+<button aria-label="Download Leads CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Clients -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Clients</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">450 records • 1.1 MB</p>
+</div>
+</div>
+<button aria-label="Download Clients CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Projects -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500">
+<span class="material-symbols-outlined text-[24px]">folder_open</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Projects</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">12 active • 0.5 MB</p>
+</div>
+</div>
+<button aria-label="Download Projects CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Tasks -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Tasks</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3,100 records • 4.8 MB</p>
+</div>
+</div>
+<button aria-label="Download Tasks CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Invoices -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Invoices</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">890 records • 1.8 MB</p>
+</div>
+</div>
+<button aria-label="Download Invoices CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Payments -->
+<div class="group flex items-center justify-between rounded-xl bg-white dark:bg-[#1c1f27] p-4 shadow-sm border border-slate-100 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 transition-all">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Payments</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">1,020 records • 2.1 MB</p>
+</div>
+</div>
+<button aria-label="Download Payments CSV" class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- Info Footer -->
+<div class="mt-8 px-6 text-center">
+<p class="text-xs text-slate-500 dark:text-slate-500">
+                    Exports are generated in standard CSV format compatible with Excel and Google Sheets.
+                </p>
+</div>
+<div class="h-20"></div> <!-- Spacer for bottom nav -->
+</div>
+<!-- Bottom Navbar -->
+<div class="absolute bottom-0 w-full border-t border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#1c1f27] px-4 pb-6 pt-2 z-20">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Dashboard</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">folder</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Projects</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary dark:text-primary" href="#">
+<div class="flex h-8 items-center justify-center relative">
+<!-- Active indicator dot -->
+<span class="absolute -top-1 right-2 h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span class="material-symbols-outlined text-[24px] font-variation-settings-'FILL'1">cloud_download</span>
+</div>
+<p class="text-xs font-bold leading-normal tracking-[0.015em]">Export</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-[#9da6b9] hover:text-primary dark:hover:text-white transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Settings</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

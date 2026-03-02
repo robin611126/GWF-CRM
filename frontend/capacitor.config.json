@@ -1,0 +1,8 @@
+{
+    "appId": "com.getwebfast.crm",
+    "appName": "GWF CRM",
+    "webDir": "dist",
+    "server": {
+        "androidScheme": "https"
+    }
+}
