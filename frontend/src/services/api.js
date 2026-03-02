@@ -53,20 +53,26 @@ const routes = {
 
     'POST /auth/login': async (body) => {
         const { data, error } = await insforge.auth.signInWithPassword({ email: body.email, password: body.password });
-        if (error) throw error;
+        if (error) {
+            console.error('InsForge auth error:', error);
+            throw error;
+        }
+        console.log('InsForge auth response:', JSON.stringify(data, null, 2));
         const { data: roleData } = await insforge.database
             .from('user_roles').select('*').eq('email', body.email).single();
+        // InsForge SDK may return token at different locations
+        const accessToken = data?.accessToken || data?.session?.access_token || data?.access_token || data?.token || 'insforge-session';
         return {
             user: {
-                id: roleData?.id || data.user.id,
-                email: data.user.email,
+                id: roleData?.id || data?.user?.id || data?.id,
+                email: body.email,
                 first_name: roleData?.first_name || '',
                 last_name: roleData?.last_name || '',
                 role: roleData?.role || 'DEVELOPER',
                 is_active: roleData?.is_active ?? true,
             },
-            accessToken: data.accessToken,
-            refreshToken: 'insforge-managed', // InsForge handles refresh internally
+            accessToken,
+            refreshToken: data?.refreshToken || data?.session?.refresh_token || 'insforge-managed',
         };
     },
 
